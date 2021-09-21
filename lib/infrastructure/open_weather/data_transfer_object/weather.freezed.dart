@@ -22,21 +22,21 @@ class _$WeatherDtoTearOff {
   const _$WeatherDtoTearOff();
 
   _WeatherDto call(
-      {required int dt,
-      required int sunrise,
-      required int sunset,
-      required double temp,
-      required double feelsLike,
-      required int pressure,
-      required int humidity,
-      required double dewPoint,
-      required double uvi,
-      required int clouds,
-      required int visibility,
-      required double windSpeed,
-      required int windDeg,
-      required double windGust,
-      required List<WeatherTagDto> weather}) {
+      {int? dt,
+      int? sunrise,
+      int? sunset,
+      double? temp,
+      double? feelsLike,
+      int? pressure,
+      int? humidity,
+      double? dewPoint,
+      double? uvi,
+      int? clouds,
+      int? visibility,
+      double? windSpeed,
+      int? windDeg,
+      double? windGust,
+      List<WeatherTagDto>? weather}) {
     return _WeatherDto(
       dt: dt,
       sunrise: sunrise,
@@ -66,21 +66,21 @@ const $WeatherDto = _$WeatherDtoTearOff();
 
 /// @nodoc
 mixin _$WeatherDto {
-  int get dt => throw _privateConstructorUsedError;
-  int get sunrise => throw _privateConstructorUsedError;
-  int get sunset => throw _privateConstructorUsedError;
-  double get temp => throw _privateConstructorUsedError;
-  double get feelsLike => throw _privateConstructorUsedError;
-  int get pressure => throw _privateConstructorUsedError;
-  int get humidity => throw _privateConstructorUsedError;
-  double get dewPoint => throw _privateConstructorUsedError;
-  double get uvi => throw _privateConstructorUsedError;
-  int get clouds => throw _privateConstructorUsedError;
-  int get visibility => throw _privateConstructorUsedError;
-  double get windSpeed => throw _privateConstructorUsedError;
-  int get windDeg => throw _privateConstructorUsedError;
-  double get windGust => throw _privateConstructorUsedError;
-  List<WeatherTagDto> get weather => throw _privateConstructorUsedError;
+  int? get dt => throw _privateConstructorUsedError;
+  int? get sunrise => throw _privateConstructorUsedError;
+  int? get sunset => throw _privateConstructorUsedError;
+  double? get temp => throw _privateConstructorUsedError;
+  double? get feelsLike => throw _privateConstructorUsedError;
+  int? get pressure => throw _privateConstructorUsedError;
+  int? get humidity => throw _privateConstructorUsedError;
+  double? get dewPoint => throw _privateConstructorUsedError;
+  double? get uvi => throw _privateConstructorUsedError;
+  int? get clouds => throw _privateConstructorUsedError;
+  int? get visibility => throw _privateConstructorUsedError;
+  double? get windSpeed => throw _privateConstructorUsedError;
+  int? get windDeg => throw _privateConstructorUsedError;
+  double? get windGust => throw _privateConstructorUsedError;
+  List<WeatherTagDto>? get weather => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -94,21 +94,21 @@ abstract class $WeatherDtoCopyWith<$Res> {
           WeatherDto value, $Res Function(WeatherDto) then) =
       _$WeatherDtoCopyWithImpl<$Res>;
   $Res call(
-      {int dt,
-      int sunrise,
-      int sunset,
-      double temp,
-      double feelsLike,
-      int pressure,
-      int humidity,
-      double dewPoint,
-      double uvi,
-      int clouds,
-      int visibility,
-      double windSpeed,
-      int windDeg,
-      double windGust,
-      List<WeatherTagDto> weather});
+      {int? dt,
+      int? sunrise,
+      int? sunset,
+      double? temp,
+      double? feelsLike,
+      int? pressure,
+      int? humidity,
+      double? dewPoint,
+      double? uvi,
+      int? clouds,
+      int? visibility,
+      double? windSpeed,
+      int? windDeg,
+      double? windGust,
+      List<WeatherTagDto>? weather});
 }
 
 /// @nodoc
@@ -141,63 +141,63 @@ class _$WeatherDtoCopyWithImpl<$Res> implements $WeatherDtoCopyWith<$Res> {
       dt: dt == freezed
           ? _value.dt
           : dt // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sunrise: sunrise == freezed
           ? _value.sunrise
           : sunrise // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sunset: sunset == freezed
           ? _value.sunset
           : sunset // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       feelsLike: feelsLike == freezed
           ? _value.feelsLike
           : feelsLike // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       pressure: pressure == freezed
           ? _value.pressure
           : pressure // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       dewPoint: dewPoint == freezed
           ? _value.dewPoint
           : dewPoint // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       uvi: uvi == freezed
           ? _value.uvi
           : uvi // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       clouds: clouds == freezed
           ? _value.clouds
           : clouds // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       visibility: visibility == freezed
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       windDeg: windDeg == freezed
           ? _value.windDeg
           : windDeg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       windGust: windGust == freezed
           ? _value.windGust
           : windGust // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       weather: weather == freezed
           ? _value.weather
           : weather // ignore: cast_nullable_to_non_nullable
-              as List<WeatherTagDto>,
+              as List<WeatherTagDto>?,
     ));
   }
 }
@@ -209,21 +209,21 @@ abstract class _$WeatherDtoCopyWith<$Res> implements $WeatherDtoCopyWith<$Res> {
       __$WeatherDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int dt,
-      int sunrise,
-      int sunset,
-      double temp,
-      double feelsLike,
-      int pressure,
-      int humidity,
-      double dewPoint,
-      double uvi,
-      int clouds,
-      int visibility,
-      double windSpeed,
-      int windDeg,
-      double windGust,
-      List<WeatherTagDto> weather});
+      {int? dt,
+      int? sunrise,
+      int? sunset,
+      double? temp,
+      double? feelsLike,
+      int? pressure,
+      int? humidity,
+      double? dewPoint,
+      double? uvi,
+      int? clouds,
+      int? visibility,
+      double? windSpeed,
+      int? windDeg,
+      double? windGust,
+      List<WeatherTagDto>? weather});
 }
 
 /// @nodoc
@@ -258,63 +258,63 @@ class __$WeatherDtoCopyWithImpl<$Res> extends _$WeatherDtoCopyWithImpl<$Res>
       dt: dt == freezed
           ? _value.dt
           : dt // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sunrise: sunrise == freezed
           ? _value.sunrise
           : sunrise // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sunset: sunset == freezed
           ? _value.sunset
           : sunset // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       feelsLike: feelsLike == freezed
           ? _value.feelsLike
           : feelsLike // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       pressure: pressure == freezed
           ? _value.pressure
           : pressure // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       dewPoint: dewPoint == freezed
           ? _value.dewPoint
           : dewPoint // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       uvi: uvi == freezed
           ? _value.uvi
           : uvi // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       clouds: clouds == freezed
           ? _value.clouds
           : clouds // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       visibility: visibility == freezed
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       windDeg: windDeg == freezed
           ? _value.windDeg
           : windDeg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       windGust: windGust == freezed
           ? _value.windGust
           : windGust // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       weather: weather == freezed
           ? _value.weather
           : weather // ignore: cast_nullable_to_non_nullable
-              as List<WeatherTagDto>,
+              as List<WeatherTagDto>?,
     ));
   }
 }
@@ -323,55 +323,55 @@ class __$WeatherDtoCopyWithImpl<$Res> extends _$WeatherDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_WeatherDto implements _WeatherDto {
   const _$_WeatherDto(
-      {required this.dt,
-      required this.sunrise,
-      required this.sunset,
-      required this.temp,
-      required this.feelsLike,
-      required this.pressure,
-      required this.humidity,
-      required this.dewPoint,
-      required this.uvi,
-      required this.clouds,
-      required this.visibility,
-      required this.windSpeed,
-      required this.windDeg,
-      required this.windGust,
-      required this.weather});
+      {this.dt,
+      this.sunrise,
+      this.sunset,
+      this.temp,
+      this.feelsLike,
+      this.pressure,
+      this.humidity,
+      this.dewPoint,
+      this.uvi,
+      this.clouds,
+      this.visibility,
+      this.windSpeed,
+      this.windDeg,
+      this.windGust,
+      this.weather});
 
   factory _$_WeatherDto.fromJson(Map<String, dynamic> json) =>
       _$$_WeatherDtoFromJson(json);
 
   @override
-  final int dt;
+  final int? dt;
   @override
-  final int sunrise;
+  final int? sunrise;
   @override
-  final int sunset;
+  final int? sunset;
   @override
-  final double temp;
+  final double? temp;
   @override
-  final double feelsLike;
+  final double? feelsLike;
   @override
-  final int pressure;
+  final int? pressure;
   @override
-  final int humidity;
+  final int? humidity;
   @override
-  final double dewPoint;
+  final double? dewPoint;
   @override
-  final double uvi;
+  final double? uvi;
   @override
-  final int clouds;
+  final int? clouds;
   @override
-  final int visibility;
+  final int? visibility;
   @override
-  final double windSpeed;
+  final double? windSpeed;
   @override
-  final int windDeg;
+  final int? windDeg;
   @override
-  final double windGust;
+  final double? windGust;
   @override
-  final List<WeatherTagDto> weather;
+  final List<WeatherTagDto>? weather;
 
   @override
   String toString() {
@@ -455,55 +455,55 @@ class _$_WeatherDto implements _WeatherDto {
 
 abstract class _WeatherDto implements WeatherDto {
   const factory _WeatherDto(
-      {required int dt,
-      required int sunrise,
-      required int sunset,
-      required double temp,
-      required double feelsLike,
-      required int pressure,
-      required int humidity,
-      required double dewPoint,
-      required double uvi,
-      required int clouds,
-      required int visibility,
-      required double windSpeed,
-      required int windDeg,
-      required double windGust,
-      required List<WeatherTagDto> weather}) = _$_WeatherDto;
+      {int? dt,
+      int? sunrise,
+      int? sunset,
+      double? temp,
+      double? feelsLike,
+      int? pressure,
+      int? humidity,
+      double? dewPoint,
+      double? uvi,
+      int? clouds,
+      int? visibility,
+      double? windSpeed,
+      int? windDeg,
+      double? windGust,
+      List<WeatherTagDto>? weather}) = _$_WeatherDto;
 
   factory _WeatherDto.fromJson(Map<String, dynamic> json) =
       _$_WeatherDto.fromJson;
 
   @override
-  int get dt => throw _privateConstructorUsedError;
+  int? get dt => throw _privateConstructorUsedError;
   @override
-  int get sunrise => throw _privateConstructorUsedError;
+  int? get sunrise => throw _privateConstructorUsedError;
   @override
-  int get sunset => throw _privateConstructorUsedError;
+  int? get sunset => throw _privateConstructorUsedError;
   @override
-  double get temp => throw _privateConstructorUsedError;
+  double? get temp => throw _privateConstructorUsedError;
   @override
-  double get feelsLike => throw _privateConstructorUsedError;
+  double? get feelsLike => throw _privateConstructorUsedError;
   @override
-  int get pressure => throw _privateConstructorUsedError;
+  int? get pressure => throw _privateConstructorUsedError;
   @override
-  int get humidity => throw _privateConstructorUsedError;
+  int? get humidity => throw _privateConstructorUsedError;
   @override
-  double get dewPoint => throw _privateConstructorUsedError;
+  double? get dewPoint => throw _privateConstructorUsedError;
   @override
-  double get uvi => throw _privateConstructorUsedError;
+  double? get uvi => throw _privateConstructorUsedError;
   @override
-  int get clouds => throw _privateConstructorUsedError;
+  int? get clouds => throw _privateConstructorUsedError;
   @override
-  int get visibility => throw _privateConstructorUsedError;
+  int? get visibility => throw _privateConstructorUsedError;
   @override
-  double get windSpeed => throw _privateConstructorUsedError;
+  double? get windSpeed => throw _privateConstructorUsedError;
   @override
-  int get windDeg => throw _privateConstructorUsedError;
+  int? get windDeg => throw _privateConstructorUsedError;
   @override
-  double get windGust => throw _privateConstructorUsedError;
+  double? get windGust => throw _privateConstructorUsedError;
   @override
-  List<WeatherTagDto> get weather => throw _privateConstructorUsedError;
+  List<WeatherTagDto>? get weather => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$WeatherDtoCopyWith<_WeatherDto> get copyWith =>

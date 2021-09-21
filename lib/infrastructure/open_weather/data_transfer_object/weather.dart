@@ -8,21 +8,21 @@ part 'weather.g.dart';
 @freezed
 class WeatherDto with _$WeatherDto {
   const factory WeatherDto({
-    required int dt,
-    required int sunrise,
-    required int sunset,
-    required double temp,
-    required double feelsLike,
-    required int pressure,
-    required int humidity,
-    required double dewPoint,
-    required double uvi,
-    required int clouds,
-    required int visibility,
-    required double windSpeed,
-    required int windDeg,
-    required double windGust,
-    required List<WeatherTagDto> weather,
+    int? dt,
+    int? sunrise,
+    int? sunset,
+    double? temp,
+    double? feelsLike,
+    int? pressure,
+    int? humidity,
+    double? dewPoint,
+    double? uvi,
+    int? clouds,
+    int? visibility,
+    double? windSpeed,
+    int? windDeg,
+    double? windGust,
+    List<WeatherTagDto>? weather,
   }) = _WeatherDto;
 
   factory WeatherDto.fromJson(Map<String, dynamic> json) =>

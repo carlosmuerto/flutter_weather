@@ -9,12 +9,12 @@ part 'request_info.g.dart';
 @freezed
 class RequestInfoDto with _$RequestInfoDto {
   const factory RequestInfoDto({
-    required double lat,
-    required double lon,
-    required String timezone,
-    required int timezoneOffset,
-    required WeatherDto current,
-    required List<DailyWeatherDto> daily,
+    double? lat,
+    double? lon,
+    String? timezone,
+    int? timezoneOffset,
+    WeatherDto? current,
+    List<DailyWeatherDto>? daily,
   }) = _RequestInfoDto;
 
   factory RequestInfoDto.fromJson(Map<String, dynamic> json) =>

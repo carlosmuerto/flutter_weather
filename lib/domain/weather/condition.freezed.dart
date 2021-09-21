@@ -2,7 +2,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'weather_tag.dart';
+part of 'condition.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,61 +13,57 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-WeatherTagDto _$WeatherTagDtoFromJson(Map<String, dynamic> json) {
-  return _WeatherTagDto.fromJson(json);
-}
-
 /// @nodoc
-class _$WeatherTagDtoTearOff {
-  const _$WeatherTagDtoTearOff();
+class _$ConditionTearOff {
+  const _$ConditionTearOff();
 
-  _WeatherTagDto call(
-      {int? id, String? main, String? description, String? icon}) {
-    return _WeatherTagDto(
+  _Condition call(
+      {required Option<int> id,
+      required Option<String> main,
+      required Option<String> description,
+      required Option<String> icon}) {
+    return _Condition(
       id: id,
       main: main,
       description: description,
       icon: icon,
     );
   }
-
-  WeatherTagDto fromJson(Map<String, Object> json) {
-    return WeatherTagDto.fromJson(json);
-  }
 }
 
 /// @nodoc
-const $WeatherTagDto = _$WeatherTagDtoTearOff();
+const $Condition = _$ConditionTearOff();
 
 /// @nodoc
-mixin _$WeatherTagDto {
-  int? get id => throw _privateConstructorUsedError;
-  String? get main => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  String? get icon => throw _privateConstructorUsedError;
+mixin _$Condition {
+  Option<int> get id => throw _privateConstructorUsedError;
+  Option<String> get main => throw _privateConstructorUsedError;
+  Option<String> get description => throw _privateConstructorUsedError;
+  Option<String> get icon => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $WeatherTagDtoCopyWith<WeatherTagDto> get copyWith =>
+  $ConditionCopyWith<Condition> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $WeatherTagDtoCopyWith<$Res> {
-  factory $WeatherTagDtoCopyWith(
-          WeatherTagDto value, $Res Function(WeatherTagDto) then) =
-      _$WeatherTagDtoCopyWithImpl<$Res>;
-  $Res call({int? id, String? main, String? description, String? icon});
+abstract class $ConditionCopyWith<$Res> {
+  factory $ConditionCopyWith(Condition value, $Res Function(Condition) then) =
+      _$ConditionCopyWithImpl<$Res>;
+  $Res call(
+      {Option<int> id,
+      Option<String> main,
+      Option<String> description,
+      Option<String> icon});
 }
 
 /// @nodoc
-class _$WeatherTagDtoCopyWithImpl<$Res>
-    implements $WeatherTagDtoCopyWith<$Res> {
-  _$WeatherTagDtoCopyWithImpl(this._value, this._then);
+class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
+  _$ConditionCopyWithImpl(this._value, this._then);
 
-  final WeatherTagDto _value;
+  final Condition _value;
   // ignore: unused_field
-  final $Res Function(WeatherTagDto) _then;
+  final $Res Function(Condition) _then;
 
   @override
   $Res call({
@@ -80,43 +76,44 @@ class _$WeatherTagDtoCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as Option<int>,
       main: main == freezed
           ? _value.main
           : main // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Option<String>,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Option<String>,
       icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Option<String>,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$WeatherTagDtoCopyWith<$Res>
-    implements $WeatherTagDtoCopyWith<$Res> {
-  factory _$WeatherTagDtoCopyWith(
-          _WeatherTagDto value, $Res Function(_WeatherTagDto) then) =
-      __$WeatherTagDtoCopyWithImpl<$Res>;
+abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
+  factory _$ConditionCopyWith(
+          _Condition value, $Res Function(_Condition) then) =
+      __$ConditionCopyWithImpl<$Res>;
   @override
-  $Res call({int? id, String? main, String? description, String? icon});
+  $Res call(
+      {Option<int> id,
+      Option<String> main,
+      Option<String> description,
+      Option<String> icon});
 }
 
 /// @nodoc
-class __$WeatherTagDtoCopyWithImpl<$Res>
-    extends _$WeatherTagDtoCopyWithImpl<$Res>
-    implements _$WeatherTagDtoCopyWith<$Res> {
-  __$WeatherTagDtoCopyWithImpl(
-      _WeatherTagDto _value, $Res Function(_WeatherTagDto) _then)
-      : super(_value, (v) => _then(v as _WeatherTagDto));
+class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
+    implements _$ConditionCopyWith<$Res> {
+  __$ConditionCopyWithImpl(_Condition _value, $Res Function(_Condition) _then)
+      : super(_value, (v) => _then(v as _Condition));
 
   @override
-  _WeatherTagDto get _value => super._value as _WeatherTagDto;
+  _Condition get _value => super._value as _Condition;
 
   @override
   $Res call({
@@ -125,53 +122,54 @@ class __$WeatherTagDtoCopyWithImpl<$Res>
     Object? description = freezed,
     Object? icon = freezed,
   }) {
-    return _then(_WeatherTagDto(
+    return _then(_Condition(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as Option<int>,
       main: main == freezed
           ? _value.main
           : main // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Option<String>,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Option<String>,
       icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Option<String>,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_WeatherTagDto implements _WeatherTagDto {
-  const _$_WeatherTagDto({this.id, this.main, this.description, this.icon});
 
-  factory _$_WeatherTagDto.fromJson(Map<String, dynamic> json) =>
-      _$$_WeatherTagDtoFromJson(json);
+class _$_Condition implements _Condition {
+  const _$_Condition(
+      {required this.id,
+      required this.main,
+      required this.description,
+      required this.icon});
 
   @override
-  final int? id;
+  final Option<int> id;
   @override
-  final String? main;
+  final Option<String> main;
   @override
-  final String? description;
+  final Option<String> description;
   @override
-  final String? icon;
+  final Option<String> icon;
 
   @override
   String toString() {
-    return 'WeatherTagDto(id: $id, main: $main, description: $description, icon: $icon)';
+    return 'Condition(id: $id, main: $main, description: $description, icon: $icon)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _WeatherTagDto &&
+        (other is _Condition &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.main, main) ||
@@ -193,35 +191,27 @@ class _$_WeatherTagDto implements _WeatherTagDto {
 
   @JsonKey(ignore: true)
   @override
-  _$WeatherTagDtoCopyWith<_WeatherTagDto> get copyWith =>
-      __$WeatherTagDtoCopyWithImpl<_WeatherTagDto>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_WeatherTagDtoToJson(this);
-  }
+  _$ConditionCopyWith<_Condition> get copyWith =>
+      __$ConditionCopyWithImpl<_Condition>(this, _$identity);
 }
 
-abstract class _WeatherTagDto implements WeatherTagDto {
-  const factory _WeatherTagDto(
-      {int? id,
-      String? main,
-      String? description,
-      String? icon}) = _$_WeatherTagDto;
-
-  factory _WeatherTagDto.fromJson(Map<String, dynamic> json) =
-      _$_WeatherTagDto.fromJson;
+abstract class _Condition implements Condition {
+  const factory _Condition(
+      {required Option<int> id,
+      required Option<String> main,
+      required Option<String> description,
+      required Option<String> icon}) = _$_Condition;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  Option<int> get id => throw _privateConstructorUsedError;
   @override
-  String? get main => throw _privateConstructorUsedError;
+  Option<String> get main => throw _privateConstructorUsedError;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  Option<String> get description => throw _privateConstructorUsedError;
   @override
-  String? get icon => throw _privateConstructorUsedError;
+  Option<String> get icon => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$WeatherTagDtoCopyWith<_WeatherTagDto> get copyWith =>
+  _$ConditionCopyWith<_Condition> get copyWith =>
       throw _privateConstructorUsedError;
 }

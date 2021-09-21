@@ -22,12 +22,12 @@ class _$RequestInfoDtoTearOff {
   const _$RequestInfoDtoTearOff();
 
   _RequestInfoDto call(
-      {required double lat,
-      required double lon,
-      required String timezone,
-      required int timezoneOffset,
-      required WeatherDto current,
-      required List<DailyWeatherDto> daily}) {
+      {double? lat,
+      double? lon,
+      String? timezone,
+      int? timezoneOffset,
+      WeatherDto? current,
+      List<DailyWeatherDto>? daily}) {
     return _RequestInfoDto(
       lat: lat,
       lon: lon,
@@ -48,12 +48,12 @@ const $RequestInfoDto = _$RequestInfoDtoTearOff();
 
 /// @nodoc
 mixin _$RequestInfoDto {
-  double get lat => throw _privateConstructorUsedError;
-  double get lon => throw _privateConstructorUsedError;
-  String get timezone => throw _privateConstructorUsedError;
-  int get timezoneOffset => throw _privateConstructorUsedError;
-  WeatherDto get current => throw _privateConstructorUsedError;
-  List<DailyWeatherDto> get daily => throw _privateConstructorUsedError;
+  double? get lat => throw _privateConstructorUsedError;
+  double? get lon => throw _privateConstructorUsedError;
+  String? get timezone => throw _privateConstructorUsedError;
+  int? get timezoneOffset => throw _privateConstructorUsedError;
+  WeatherDto? get current => throw _privateConstructorUsedError;
+  List<DailyWeatherDto>? get daily => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,14 +67,14 @@ abstract class $RequestInfoDtoCopyWith<$Res> {
           RequestInfoDto value, $Res Function(RequestInfoDto) then) =
       _$RequestInfoDtoCopyWithImpl<$Res>;
   $Res call(
-      {double lat,
-      double lon,
-      String timezone,
-      int timezoneOffset,
-      WeatherDto current,
-      List<DailyWeatherDto> daily});
+      {double? lat,
+      double? lon,
+      String? timezone,
+      int? timezoneOffset,
+      WeatherDto? current,
+      List<DailyWeatherDto>? daily});
 
-  $WeatherDtoCopyWith<$Res> get current;
+  $WeatherDtoCopyWith<$Res>? get current;
 }
 
 /// @nodoc
@@ -99,33 +99,37 @@ class _$RequestInfoDtoCopyWithImpl<$Res>
       lat: lat == freezed
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       lon: lon == freezed
           ? _value.lon
           : lon // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       timezone: timezone == freezed
           ? _value.timezone
           : timezone // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       timezoneOffset: timezoneOffset == freezed
           ? _value.timezoneOffset
           : timezoneOffset // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       current: current == freezed
           ? _value.current
           : current // ignore: cast_nullable_to_non_nullable
-              as WeatherDto,
+              as WeatherDto?,
       daily: daily == freezed
           ? _value.daily
           : daily // ignore: cast_nullable_to_non_nullable
-              as List<DailyWeatherDto>,
+              as List<DailyWeatherDto>?,
     ));
   }
 
   @override
-  $WeatherDtoCopyWith<$Res> get current {
-    return $WeatherDtoCopyWith<$Res>(_value.current, (value) {
+  $WeatherDtoCopyWith<$Res>? get current {
+    if (_value.current == null) {
+      return null;
+    }
+
+    return $WeatherDtoCopyWith<$Res>(_value.current!, (value) {
       return _then(_value.copyWith(current: value));
     });
   }
@@ -139,15 +143,15 @@ abstract class _$RequestInfoDtoCopyWith<$Res>
       __$RequestInfoDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {double lat,
-      double lon,
-      String timezone,
-      int timezoneOffset,
-      WeatherDto current,
-      List<DailyWeatherDto> daily});
+      {double? lat,
+      double? lon,
+      String? timezone,
+      int? timezoneOffset,
+      WeatherDto? current,
+      List<DailyWeatherDto>? daily});
 
   @override
-  $WeatherDtoCopyWith<$Res> get current;
+  $WeatherDtoCopyWith<$Res>? get current;
 }
 
 /// @nodoc
@@ -174,27 +178,27 @@ class __$RequestInfoDtoCopyWithImpl<$Res>
       lat: lat == freezed
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       lon: lon == freezed
           ? _value.lon
           : lon // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       timezone: timezone == freezed
           ? _value.timezone
           : timezone // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       timezoneOffset: timezoneOffset == freezed
           ? _value.timezoneOffset
           : timezoneOffset // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       current: current == freezed
           ? _value.current
           : current // ignore: cast_nullable_to_non_nullable
-              as WeatherDto,
+              as WeatherDto?,
       daily: daily == freezed
           ? _value.daily
           : daily // ignore: cast_nullable_to_non_nullable
-              as List<DailyWeatherDto>,
+              as List<DailyWeatherDto>?,
     ));
   }
 }
@@ -203,28 +207,28 @@ class __$RequestInfoDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_RequestInfoDto implements _RequestInfoDto {
   const _$_RequestInfoDto(
-      {required this.lat,
-      required this.lon,
-      required this.timezone,
-      required this.timezoneOffset,
-      required this.current,
-      required this.daily});
+      {this.lat,
+      this.lon,
+      this.timezone,
+      this.timezoneOffset,
+      this.current,
+      this.daily});
 
   factory _$_RequestInfoDto.fromJson(Map<String, dynamic> json) =>
       _$$_RequestInfoDtoFromJson(json);
 
   @override
-  final double lat;
+  final double? lat;
   @override
-  final double lon;
+  final double? lon;
   @override
-  final String timezone;
+  final String? timezone;
   @override
-  final int timezoneOffset;
+  final int? timezoneOffset;
   @override
-  final WeatherDto current;
+  final WeatherDto? current;
   @override
-  final List<DailyWeatherDto> daily;
+  final List<DailyWeatherDto>? daily;
 
   @override
   String toString() {
@@ -275,28 +279,28 @@ class _$_RequestInfoDto implements _RequestInfoDto {
 
 abstract class _RequestInfoDto implements RequestInfoDto {
   const factory _RequestInfoDto(
-      {required double lat,
-      required double lon,
-      required String timezone,
-      required int timezoneOffset,
-      required WeatherDto current,
-      required List<DailyWeatherDto> daily}) = _$_RequestInfoDto;
+      {double? lat,
+      double? lon,
+      String? timezone,
+      int? timezoneOffset,
+      WeatherDto? current,
+      List<DailyWeatherDto>? daily}) = _$_RequestInfoDto;
 
   factory _RequestInfoDto.fromJson(Map<String, dynamic> json) =
       _$_RequestInfoDto.fromJson;
 
   @override
-  double get lat => throw _privateConstructorUsedError;
+  double? get lat => throw _privateConstructorUsedError;
   @override
-  double get lon => throw _privateConstructorUsedError;
+  double? get lon => throw _privateConstructorUsedError;
   @override
-  String get timezone => throw _privateConstructorUsedError;
+  String? get timezone => throw _privateConstructorUsedError;
   @override
-  int get timezoneOffset => throw _privateConstructorUsedError;
+  int? get timezoneOffset => throw _privateConstructorUsedError;
   @override
-  WeatherDto get current => throw _privateConstructorUsedError;
+  WeatherDto? get current => throw _privateConstructorUsedError;
   @override
-  List<DailyWeatherDto> get daily => throw _privateConstructorUsedError;
+  List<DailyWeatherDto>? get daily => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$RequestInfoDtoCopyWith<_RequestInfoDto> get copyWith =>

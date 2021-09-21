@@ -22,25 +22,25 @@ class _$DailyWeatherDtoTearOff {
   const _$DailyWeatherDtoTearOff();
 
   _DailyWeather call(
-      {required int dt,
-      required int sunrise,
-      required int sunset,
-      required int moonrise,
-      required int moonset,
-      required double moonPhase,
-      required TempDto temp,
-      required FeelsLikeDto feelsLike,
-      required int pressure,
-      required int humidity,
-      required double dewPoint,
-      required double windSpeed,
-      required int windDeg,
-      required double windGust,
-      required List<WeatherTagDto> weather,
-      required int clouds,
-      required double pop,
-      required double uvi,
-      required double rain}) {
+      {int? dt,
+      int? sunrise,
+      int? sunset,
+      int? moonrise,
+      int? moonset,
+      double? moonPhase,
+      TempDto? temp,
+      FeelsLikeDto? feelsLike,
+      int? pressure,
+      int? humidity,
+      double? dewPoint,
+      double? windSpeed,
+      int? windDeg,
+      double? windGust,
+      List<WeatherTagDto>? weather,
+      int? clouds,
+      double? pop,
+      double? uvi,
+      double? rain}) {
     return _DailyWeather(
       dt: dt,
       sunrise: sunrise,
@@ -74,25 +74,25 @@ const $DailyWeatherDto = _$DailyWeatherDtoTearOff();
 
 /// @nodoc
 mixin _$DailyWeatherDto {
-  int get dt => throw _privateConstructorUsedError;
-  int get sunrise => throw _privateConstructorUsedError;
-  int get sunset => throw _privateConstructorUsedError;
-  int get moonrise => throw _privateConstructorUsedError;
-  int get moonset => throw _privateConstructorUsedError;
-  double get moonPhase => throw _privateConstructorUsedError;
-  TempDto get temp => throw _privateConstructorUsedError;
-  FeelsLikeDto get feelsLike => throw _privateConstructorUsedError;
-  int get pressure => throw _privateConstructorUsedError;
-  int get humidity => throw _privateConstructorUsedError;
-  double get dewPoint => throw _privateConstructorUsedError;
-  double get windSpeed => throw _privateConstructorUsedError;
-  int get windDeg => throw _privateConstructorUsedError;
-  double get windGust => throw _privateConstructorUsedError;
-  List<WeatherTagDto> get weather => throw _privateConstructorUsedError;
-  int get clouds => throw _privateConstructorUsedError;
-  double get pop => throw _privateConstructorUsedError;
-  double get uvi => throw _privateConstructorUsedError;
-  double get rain => throw _privateConstructorUsedError;
+  int? get dt => throw _privateConstructorUsedError;
+  int? get sunrise => throw _privateConstructorUsedError;
+  int? get sunset => throw _privateConstructorUsedError;
+  int? get moonrise => throw _privateConstructorUsedError;
+  int? get moonset => throw _privateConstructorUsedError;
+  double? get moonPhase => throw _privateConstructorUsedError;
+  TempDto? get temp => throw _privateConstructorUsedError;
+  FeelsLikeDto? get feelsLike => throw _privateConstructorUsedError;
+  int? get pressure => throw _privateConstructorUsedError;
+  int? get humidity => throw _privateConstructorUsedError;
+  double? get dewPoint => throw _privateConstructorUsedError;
+  double? get windSpeed => throw _privateConstructorUsedError;
+  int? get windDeg => throw _privateConstructorUsedError;
+  double? get windGust => throw _privateConstructorUsedError;
+  List<WeatherTagDto>? get weather => throw _privateConstructorUsedError;
+  int? get clouds => throw _privateConstructorUsedError;
+  double? get pop => throw _privateConstructorUsedError;
+  double? get uvi => throw _privateConstructorUsedError;
+  double? get rain => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -106,28 +106,28 @@ abstract class $DailyWeatherDtoCopyWith<$Res> {
           DailyWeatherDto value, $Res Function(DailyWeatherDto) then) =
       _$DailyWeatherDtoCopyWithImpl<$Res>;
   $Res call(
-      {int dt,
-      int sunrise,
-      int sunset,
-      int moonrise,
-      int moonset,
-      double moonPhase,
-      TempDto temp,
-      FeelsLikeDto feelsLike,
-      int pressure,
-      int humidity,
-      double dewPoint,
-      double windSpeed,
-      int windDeg,
-      double windGust,
-      List<WeatherTagDto> weather,
-      int clouds,
-      double pop,
-      double uvi,
-      double rain});
+      {int? dt,
+      int? sunrise,
+      int? sunset,
+      int? moonrise,
+      int? moonset,
+      double? moonPhase,
+      TempDto? temp,
+      FeelsLikeDto? feelsLike,
+      int? pressure,
+      int? humidity,
+      double? dewPoint,
+      double? windSpeed,
+      int? windDeg,
+      double? windGust,
+      List<WeatherTagDto>? weather,
+      int? clouds,
+      double? pop,
+      double? uvi,
+      double? rain});
 
-  $TempDtoCopyWith<$Res> get temp;
-  $FeelsLikeDtoCopyWith<$Res> get feelsLike;
+  $TempDtoCopyWith<$Res>? get temp;
+  $FeelsLikeDtoCopyWith<$Res>? get feelsLike;
 }
 
 /// @nodoc
@@ -165,92 +165,100 @@ class _$DailyWeatherDtoCopyWithImpl<$Res>
       dt: dt == freezed
           ? _value.dt
           : dt // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sunrise: sunrise == freezed
           ? _value.sunrise
           : sunrise // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sunset: sunset == freezed
           ? _value.sunset
           : sunset // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       moonrise: moonrise == freezed
           ? _value.moonrise
           : moonrise // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       moonset: moonset == freezed
           ? _value.moonset
           : moonset // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       moonPhase: moonPhase == freezed
           ? _value.moonPhase
           : moonPhase // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
-              as TempDto,
+              as TempDto?,
       feelsLike: feelsLike == freezed
           ? _value.feelsLike
           : feelsLike // ignore: cast_nullable_to_non_nullable
-              as FeelsLikeDto,
+              as FeelsLikeDto?,
       pressure: pressure == freezed
           ? _value.pressure
           : pressure // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       dewPoint: dewPoint == freezed
           ? _value.dewPoint
           : dewPoint // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       windDeg: windDeg == freezed
           ? _value.windDeg
           : windDeg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       windGust: windGust == freezed
           ? _value.windGust
           : windGust // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       weather: weather == freezed
           ? _value.weather
           : weather // ignore: cast_nullable_to_non_nullable
-              as List<WeatherTagDto>,
+              as List<WeatherTagDto>?,
       clouds: clouds == freezed
           ? _value.clouds
           : clouds // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       pop: pop == freezed
           ? _value.pop
           : pop // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       uvi: uvi == freezed
           ? _value.uvi
           : uvi // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       rain: rain == freezed
           ? _value.rain
           : rain // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 
   @override
-  $TempDtoCopyWith<$Res> get temp {
-    return $TempDtoCopyWith<$Res>(_value.temp, (value) {
+  $TempDtoCopyWith<$Res>? get temp {
+    if (_value.temp == null) {
+      return null;
+    }
+
+    return $TempDtoCopyWith<$Res>(_value.temp!, (value) {
       return _then(_value.copyWith(temp: value));
     });
   }
 
   @override
-  $FeelsLikeDtoCopyWith<$Res> get feelsLike {
-    return $FeelsLikeDtoCopyWith<$Res>(_value.feelsLike, (value) {
+  $FeelsLikeDtoCopyWith<$Res>? get feelsLike {
+    if (_value.feelsLike == null) {
+      return null;
+    }
+
+    return $FeelsLikeDtoCopyWith<$Res>(_value.feelsLike!, (value) {
       return _then(_value.copyWith(feelsLike: value));
     });
   }
@@ -264,30 +272,30 @@ abstract class _$DailyWeatherCopyWith<$Res>
       __$DailyWeatherCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int dt,
-      int sunrise,
-      int sunset,
-      int moonrise,
-      int moonset,
-      double moonPhase,
-      TempDto temp,
-      FeelsLikeDto feelsLike,
-      int pressure,
-      int humidity,
-      double dewPoint,
-      double windSpeed,
-      int windDeg,
-      double windGust,
-      List<WeatherTagDto> weather,
-      int clouds,
-      double pop,
-      double uvi,
-      double rain});
+      {int? dt,
+      int? sunrise,
+      int? sunset,
+      int? moonrise,
+      int? moonset,
+      double? moonPhase,
+      TempDto? temp,
+      FeelsLikeDto? feelsLike,
+      int? pressure,
+      int? humidity,
+      double? dewPoint,
+      double? windSpeed,
+      int? windDeg,
+      double? windGust,
+      List<WeatherTagDto>? weather,
+      int? clouds,
+      double? pop,
+      double? uvi,
+      double? rain});
 
   @override
-  $TempDtoCopyWith<$Res> get temp;
+  $TempDtoCopyWith<$Res>? get temp;
   @override
-  $FeelsLikeDtoCopyWith<$Res> get feelsLike;
+  $FeelsLikeDtoCopyWith<$Res>? get feelsLike;
 }
 
 /// @nodoc
@@ -327,79 +335,79 @@ class __$DailyWeatherCopyWithImpl<$Res>
       dt: dt == freezed
           ? _value.dt
           : dt // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sunrise: sunrise == freezed
           ? _value.sunrise
           : sunrise // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sunset: sunset == freezed
           ? _value.sunset
           : sunset // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       moonrise: moonrise == freezed
           ? _value.moonrise
           : moonrise // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       moonset: moonset == freezed
           ? _value.moonset
           : moonset // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       moonPhase: moonPhase == freezed
           ? _value.moonPhase
           : moonPhase // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
-              as TempDto,
+              as TempDto?,
       feelsLike: feelsLike == freezed
           ? _value.feelsLike
           : feelsLike // ignore: cast_nullable_to_non_nullable
-              as FeelsLikeDto,
+              as FeelsLikeDto?,
       pressure: pressure == freezed
           ? _value.pressure
           : pressure // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       dewPoint: dewPoint == freezed
           ? _value.dewPoint
           : dewPoint // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       windDeg: windDeg == freezed
           ? _value.windDeg
           : windDeg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       windGust: windGust == freezed
           ? _value.windGust
           : windGust // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       weather: weather == freezed
           ? _value.weather
           : weather // ignore: cast_nullable_to_non_nullable
-              as List<WeatherTagDto>,
+              as List<WeatherTagDto>?,
       clouds: clouds == freezed
           ? _value.clouds
           : clouds // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       pop: pop == freezed
           ? _value.pop
           : pop // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       uvi: uvi == freezed
           ? _value.uvi
           : uvi // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       rain: rain == freezed
           ? _value.rain
           : rain // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -408,67 +416,67 @@ class __$DailyWeatherCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DailyWeather implements _DailyWeather {
   const _$_DailyWeather(
-      {required this.dt,
-      required this.sunrise,
-      required this.sunset,
-      required this.moonrise,
-      required this.moonset,
-      required this.moonPhase,
-      required this.temp,
-      required this.feelsLike,
-      required this.pressure,
-      required this.humidity,
-      required this.dewPoint,
-      required this.windSpeed,
-      required this.windDeg,
-      required this.windGust,
-      required this.weather,
-      required this.clouds,
-      required this.pop,
-      required this.uvi,
-      required this.rain});
+      {this.dt,
+      this.sunrise,
+      this.sunset,
+      this.moonrise,
+      this.moonset,
+      this.moonPhase,
+      this.temp,
+      this.feelsLike,
+      this.pressure,
+      this.humidity,
+      this.dewPoint,
+      this.windSpeed,
+      this.windDeg,
+      this.windGust,
+      this.weather,
+      this.clouds,
+      this.pop,
+      this.uvi,
+      this.rain});
 
   factory _$_DailyWeather.fromJson(Map<String, dynamic> json) =>
       _$$_DailyWeatherFromJson(json);
 
   @override
-  final int dt;
+  final int? dt;
   @override
-  final int sunrise;
+  final int? sunrise;
   @override
-  final int sunset;
+  final int? sunset;
   @override
-  final int moonrise;
+  final int? moonrise;
   @override
-  final int moonset;
+  final int? moonset;
   @override
-  final double moonPhase;
+  final double? moonPhase;
   @override
-  final TempDto temp;
+  final TempDto? temp;
   @override
-  final FeelsLikeDto feelsLike;
+  final FeelsLikeDto? feelsLike;
   @override
-  final int pressure;
+  final int? pressure;
   @override
-  final int humidity;
+  final int? humidity;
   @override
-  final double dewPoint;
+  final double? dewPoint;
   @override
-  final double windSpeed;
+  final double? windSpeed;
   @override
-  final int windDeg;
+  final int? windDeg;
   @override
-  final double windGust;
+  final double? windGust;
   @override
-  final List<WeatherTagDto> weather;
+  final List<WeatherTagDto>? weather;
   @override
-  final int clouds;
+  final int? clouds;
   @override
-  final double pop;
+  final double? pop;
   @override
-  final double uvi;
+  final double? uvi;
   @override
-  final double rain;
+  final double? rain;
 
   @override
   String toString() {
@@ -567,67 +575,67 @@ class _$_DailyWeather implements _DailyWeather {
 
 abstract class _DailyWeather implements DailyWeatherDto {
   const factory _DailyWeather(
-      {required int dt,
-      required int sunrise,
-      required int sunset,
-      required int moonrise,
-      required int moonset,
-      required double moonPhase,
-      required TempDto temp,
-      required FeelsLikeDto feelsLike,
-      required int pressure,
-      required int humidity,
-      required double dewPoint,
-      required double windSpeed,
-      required int windDeg,
-      required double windGust,
-      required List<WeatherTagDto> weather,
-      required int clouds,
-      required double pop,
-      required double uvi,
-      required double rain}) = _$_DailyWeather;
+      {int? dt,
+      int? sunrise,
+      int? sunset,
+      int? moonrise,
+      int? moonset,
+      double? moonPhase,
+      TempDto? temp,
+      FeelsLikeDto? feelsLike,
+      int? pressure,
+      int? humidity,
+      double? dewPoint,
+      double? windSpeed,
+      int? windDeg,
+      double? windGust,
+      List<WeatherTagDto>? weather,
+      int? clouds,
+      double? pop,
+      double? uvi,
+      double? rain}) = _$_DailyWeather;
 
   factory _DailyWeather.fromJson(Map<String, dynamic> json) =
       _$_DailyWeather.fromJson;
 
   @override
-  int get dt => throw _privateConstructorUsedError;
+  int? get dt => throw _privateConstructorUsedError;
   @override
-  int get sunrise => throw _privateConstructorUsedError;
+  int? get sunrise => throw _privateConstructorUsedError;
   @override
-  int get sunset => throw _privateConstructorUsedError;
+  int? get sunset => throw _privateConstructorUsedError;
   @override
-  int get moonrise => throw _privateConstructorUsedError;
+  int? get moonrise => throw _privateConstructorUsedError;
   @override
-  int get moonset => throw _privateConstructorUsedError;
+  int? get moonset => throw _privateConstructorUsedError;
   @override
-  double get moonPhase => throw _privateConstructorUsedError;
+  double? get moonPhase => throw _privateConstructorUsedError;
   @override
-  TempDto get temp => throw _privateConstructorUsedError;
+  TempDto? get temp => throw _privateConstructorUsedError;
   @override
-  FeelsLikeDto get feelsLike => throw _privateConstructorUsedError;
+  FeelsLikeDto? get feelsLike => throw _privateConstructorUsedError;
   @override
-  int get pressure => throw _privateConstructorUsedError;
+  int? get pressure => throw _privateConstructorUsedError;
   @override
-  int get humidity => throw _privateConstructorUsedError;
+  int? get humidity => throw _privateConstructorUsedError;
   @override
-  double get dewPoint => throw _privateConstructorUsedError;
+  double? get dewPoint => throw _privateConstructorUsedError;
   @override
-  double get windSpeed => throw _privateConstructorUsedError;
+  double? get windSpeed => throw _privateConstructorUsedError;
   @override
-  int get windDeg => throw _privateConstructorUsedError;
+  int? get windDeg => throw _privateConstructorUsedError;
   @override
-  double get windGust => throw _privateConstructorUsedError;
+  double? get windGust => throw _privateConstructorUsedError;
   @override
-  List<WeatherTagDto> get weather => throw _privateConstructorUsedError;
+  List<WeatherTagDto>? get weather => throw _privateConstructorUsedError;
   @override
-  int get clouds => throw _privateConstructorUsedError;
+  int? get clouds => throw _privateConstructorUsedError;
   @override
-  double get pop => throw _privateConstructorUsedError;
+  double? get pop => throw _privateConstructorUsedError;
   @override
-  double get uvi => throw _privateConstructorUsedError;
+  double? get uvi => throw _privateConstructorUsedError;
   @override
-  double get rain => throw _privateConstructorUsedError;
+  double? get rain => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DailyWeatherCopyWith<_DailyWeather> get copyWith =>
@@ -642,11 +650,7 @@ FeelsLikeDto _$FeelsLikeDtoFromJson(Map<String, dynamic> json) {
 class _$FeelsLikeDtoTearOff {
   const _$FeelsLikeDtoTearOff();
 
-  _FeelsLike call(
-      {required double day,
-      required double night,
-      required double eve,
-      required double morn}) {
+  _FeelsLike call({double? day, double? night, double? eve, double? morn}) {
     return _FeelsLike(
       day: day,
       night: night,
@@ -665,10 +669,10 @@ const $FeelsLikeDto = _$FeelsLikeDtoTearOff();
 
 /// @nodoc
 mixin _$FeelsLikeDto {
-  double get day => throw _privateConstructorUsedError;
-  double get night => throw _privateConstructorUsedError;
-  double get eve => throw _privateConstructorUsedError;
-  double get morn => throw _privateConstructorUsedError;
+  double? get day => throw _privateConstructorUsedError;
+  double? get night => throw _privateConstructorUsedError;
+  double? get eve => throw _privateConstructorUsedError;
+  double? get morn => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -681,7 +685,7 @@ abstract class $FeelsLikeDtoCopyWith<$Res> {
   factory $FeelsLikeDtoCopyWith(
           FeelsLikeDto value, $Res Function(FeelsLikeDto) then) =
       _$FeelsLikeDtoCopyWithImpl<$Res>;
-  $Res call({double day, double night, double eve, double morn});
+  $Res call({double? day, double? night, double? eve, double? morn});
 }
 
 /// @nodoc
@@ -703,19 +707,19 @@ class _$FeelsLikeDtoCopyWithImpl<$Res> implements $FeelsLikeDtoCopyWith<$Res> {
       day: day == freezed
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       night: night == freezed
           ? _value.night
           : night // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       eve: eve == freezed
           ? _value.eve
           : eve // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       morn: morn == freezed
           ? _value.morn
           : morn // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -727,7 +731,7 @@ abstract class _$FeelsLikeCopyWith<$Res>
           _FeelsLike value, $Res Function(_FeelsLike) then) =
       __$FeelsLikeCopyWithImpl<$Res>;
   @override
-  $Res call({double day, double night, double eve, double morn});
+  $Res call({double? day, double? night, double? eve, double? morn});
 }
 
 /// @nodoc
@@ -750,19 +754,19 @@ class __$FeelsLikeCopyWithImpl<$Res> extends _$FeelsLikeDtoCopyWithImpl<$Res>
       day: day == freezed
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       night: night == freezed
           ? _value.night
           : night // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       eve: eve == freezed
           ? _value.eve
           : eve // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       morn: morn == freezed
           ? _value.morn
           : morn // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -770,23 +774,19 @@ class __$FeelsLikeCopyWithImpl<$Res> extends _$FeelsLikeDtoCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FeelsLike implements _FeelsLike {
-  const _$_FeelsLike(
-      {required this.day,
-      required this.night,
-      required this.eve,
-      required this.morn});
+  const _$_FeelsLike({this.day, this.night, this.eve, this.morn});
 
   factory _$_FeelsLike.fromJson(Map<String, dynamic> json) =>
       _$$_FeelsLikeFromJson(json);
 
   @override
-  final double day;
+  final double? day;
   @override
-  final double night;
+  final double? night;
   @override
-  final double eve;
+  final double? eve;
   @override
-  final double morn;
+  final double? morn;
 
   @override
   String toString() {
@@ -828,22 +828,19 @@ class _$_FeelsLike implements _FeelsLike {
 
 abstract class _FeelsLike implements FeelsLikeDto {
   const factory _FeelsLike(
-      {required double day,
-      required double night,
-      required double eve,
-      required double morn}) = _$_FeelsLike;
+      {double? day, double? night, double? eve, double? morn}) = _$_FeelsLike;
 
   factory _FeelsLike.fromJson(Map<String, dynamic> json) =
       _$_FeelsLike.fromJson;
 
   @override
-  double get day => throw _privateConstructorUsedError;
+  double? get day => throw _privateConstructorUsedError;
   @override
-  double get night => throw _privateConstructorUsedError;
+  double? get night => throw _privateConstructorUsedError;
   @override
-  double get eve => throw _privateConstructorUsedError;
+  double? get eve => throw _privateConstructorUsedError;
   @override
-  double get morn => throw _privateConstructorUsedError;
+  double? get morn => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FeelsLikeCopyWith<_FeelsLike> get copyWith =>
@@ -859,12 +856,12 @@ class _$TempDtoTearOff {
   const _$TempDtoTearOff();
 
   _Temp call(
-      {required double day,
-      required double min,
-      required double max,
-      required double night,
-      required double eve,
-      required double morn}) {
+      {double? day,
+      double? min,
+      double? max,
+      double? night,
+      double? eve,
+      double? morn}) {
     return _Temp(
       day: day,
       min: min,
@@ -885,12 +882,12 @@ const $TempDto = _$TempDtoTearOff();
 
 /// @nodoc
 mixin _$TempDto {
-  double get day => throw _privateConstructorUsedError;
-  double get min => throw _privateConstructorUsedError;
-  double get max => throw _privateConstructorUsedError;
-  double get night => throw _privateConstructorUsedError;
-  double get eve => throw _privateConstructorUsedError;
-  double get morn => throw _privateConstructorUsedError;
+  double? get day => throw _privateConstructorUsedError;
+  double? get min => throw _privateConstructorUsedError;
+  double? get max => throw _privateConstructorUsedError;
+  double? get night => throw _privateConstructorUsedError;
+  double? get eve => throw _privateConstructorUsedError;
+  double? get morn => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -902,12 +899,12 @@ abstract class $TempDtoCopyWith<$Res> {
   factory $TempDtoCopyWith(TempDto value, $Res Function(TempDto) then) =
       _$TempDtoCopyWithImpl<$Res>;
   $Res call(
-      {double day,
-      double min,
-      double max,
-      double night,
-      double eve,
-      double morn});
+      {double? day,
+      double? min,
+      double? max,
+      double? night,
+      double? eve,
+      double? morn});
 }
 
 /// @nodoc
@@ -931,27 +928,27 @@ class _$TempDtoCopyWithImpl<$Res> implements $TempDtoCopyWith<$Res> {
       day: day == freezed
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       min: min == freezed
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       max: max == freezed
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       night: night == freezed
           ? _value.night
           : night // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       eve: eve == freezed
           ? _value.eve
           : eve // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       morn: morn == freezed
           ? _value.morn
           : morn // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -962,12 +959,12 @@ abstract class _$TempCopyWith<$Res> implements $TempDtoCopyWith<$Res> {
       __$TempCopyWithImpl<$Res>;
   @override
   $Res call(
-      {double day,
-      double min,
-      double max,
-      double night,
-      double eve,
-      double morn});
+      {double? day,
+      double? min,
+      double? max,
+      double? night,
+      double? eve,
+      double? morn});
 }
 
 /// @nodoc
@@ -992,27 +989,27 @@ class __$TempCopyWithImpl<$Res> extends _$TempDtoCopyWithImpl<$Res>
       day: day == freezed
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       min: min == freezed
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       max: max == freezed
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       night: night == freezed
           ? _value.night
           : night // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       eve: eve == freezed
           ? _value.eve
           : eve // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       morn: morn == freezed
           ? _value.morn
           : morn // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -1021,27 +1018,22 @@ class __$TempCopyWithImpl<$Res> extends _$TempDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Temp implements _Temp {
   const _$_Temp(
-      {required this.day,
-      required this.min,
-      required this.max,
-      required this.night,
-      required this.eve,
-      required this.morn});
+      {this.day, this.min, this.max, this.night, this.eve, this.morn});
 
   factory _$_Temp.fromJson(Map<String, dynamic> json) => _$$_TempFromJson(json);
 
   @override
-  final double day;
+  final double? day;
   @override
-  final double min;
+  final double? min;
   @override
-  final double max;
+  final double? max;
   @override
-  final double night;
+  final double? night;
   @override
-  final double eve;
+  final double? eve;
   @override
-  final double morn;
+  final double? morn;
 
   @override
   String toString() {
@@ -1089,27 +1081,27 @@ class _$_Temp implements _Temp {
 
 abstract class _Temp implements TempDto {
   const factory _Temp(
-      {required double day,
-      required double min,
-      required double max,
-      required double night,
-      required double eve,
-      required double morn}) = _$_Temp;
+      {double? day,
+      double? min,
+      double? max,
+      double? night,
+      double? eve,
+      double? morn}) = _$_Temp;
 
   factory _Temp.fromJson(Map<String, dynamic> json) = _$_Temp.fromJson;
 
   @override
-  double get day => throw _privateConstructorUsedError;
+  double? get day => throw _privateConstructorUsedError;
   @override
-  double get min => throw _privateConstructorUsedError;
+  double? get min => throw _privateConstructorUsedError;
   @override
-  double get max => throw _privateConstructorUsedError;
+  double? get max => throw _privateConstructorUsedError;
   @override
-  double get night => throw _privateConstructorUsedError;
+  double? get night => throw _privateConstructorUsedError;
   @override
-  double get eve => throw _privateConstructorUsedError;
+  double? get eve => throw _privateConstructorUsedError;
   @override
-  double get morn => throw _privateConstructorUsedError;
+  double? get morn => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TempCopyWith<_Temp> get copyWith => throw _privateConstructorUsedError;

@@ -8,25 +8,25 @@ part 'dairy_weather.g.dart';
 @freezed
 class DailyWeatherDto with _$DailyWeatherDto {
   const factory DailyWeatherDto({
-    required int dt,
-    required int sunrise,
-    required int sunset,
-    required int moonrise,
-    required int moonset,
-    required double moonPhase,
-    required TempDto temp,
-    required FeelsLikeDto feelsLike,
-    required int pressure,
-    required int humidity,
-    required double dewPoint,
-    required double windSpeed,
-    required int windDeg,
-    required double windGust,
-    required List<WeatherTagDto> weather,
-    required int clouds,
-    required double pop,
-    required double uvi,
-    required double rain,
+    int? dt,
+    int? sunrise,
+    int? sunset,
+    int? moonrise,
+    int? moonset,
+    double? moonPhase,
+    TempDto? temp,
+    FeelsLikeDto? feelsLike,
+    int? pressure,
+    int? humidity,
+    double? dewPoint,
+    double? windSpeed,
+    int? windDeg,
+    double? windGust,
+    List<WeatherTagDto>? weather,
+    int? clouds,
+    double? pop,
+    double? uvi,
+    double? rain,
   }) = _DailyWeather;
 
   factory DailyWeatherDto.fromJson(Map<String, dynamic> json) =>
@@ -36,10 +36,10 @@ class DailyWeatherDto with _$DailyWeatherDto {
 @freezed
 class FeelsLikeDto with _$FeelsLikeDto {
   const factory FeelsLikeDto({
-    required double day,
-    required double night,
-    required double eve,
-    required double morn,
+    double? day,
+    double? night,
+    double? eve,
+    double? morn,
   }) = _FeelsLike;
 
   factory FeelsLikeDto.fromJson(Map<String, dynamic> json) =>
@@ -49,12 +49,12 @@ class FeelsLikeDto with _$FeelsLikeDto {
 @freezed
 class TempDto with _$TempDto {
   const factory TempDto({
-    required double day,
-    required double min,
-    required double max,
-    required double night,
-    required double eve,
-    required double morn,
+    double? day,
+    double? min,
+    double? max,
+    double? night,
+    double? eve,
+    double? morn,
   }) = _Temp;
 
   factory TempDto.fromJson(Map<String, dynamic> json) =>
