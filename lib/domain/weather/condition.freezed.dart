@@ -13,21 +13,29 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+Condition _$ConditionFromJson(Map<String, dynamic> json) {
+  return _Condition.fromJson(json);
+}
+
 /// @nodoc
 class _$ConditionTearOff {
   const _$ConditionTearOff();
 
   _Condition call(
-      {required Option<int> id,
-      required Option<String> main,
-      required Option<String> description,
-      required Option<String> icon}) {
+      {@IntOptionConverter() required Option<int> id,
+      @StringOptionConverter() required Option<String> main,
+      @StringOptionConverter() required Option<String> description,
+      @StringOptionConverter() required Option<String> icon}) {
     return _Condition(
       id: id,
       main: main,
       description: description,
       icon: icon,
     );
+  }
+
+  Condition fromJson(Map<String, Object> json) {
+    return Condition.fromJson(json);
   }
 }
 
@@ -36,11 +44,16 @@ const $Condition = _$ConditionTearOff();
 
 /// @nodoc
 mixin _$Condition {
+  @IntOptionConverter()
   Option<int> get id => throw _privateConstructorUsedError;
+  @StringOptionConverter()
   Option<String> get main => throw _privateConstructorUsedError;
+  @StringOptionConverter()
   Option<String> get description => throw _privateConstructorUsedError;
+  @StringOptionConverter()
   Option<String> get icon => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ConditionCopyWith<Condition> get copyWith =>
       throw _privateConstructorUsedError;
@@ -51,10 +64,10 @@ abstract class $ConditionCopyWith<$Res> {
   factory $ConditionCopyWith(Condition value, $Res Function(Condition) then) =
       _$ConditionCopyWithImpl<$Res>;
   $Res call(
-      {Option<int> id,
-      Option<String> main,
-      Option<String> description,
-      Option<String> icon});
+      {@IntOptionConverter() Option<int> id,
+      @StringOptionConverter() Option<String> main,
+      @StringOptionConverter() Option<String> description,
+      @StringOptionConverter() Option<String> icon});
 }
 
 /// @nodoc
@@ -100,10 +113,10 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       __$ConditionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Option<int> id,
-      Option<String> main,
-      Option<String> description,
-      Option<String> icon});
+      {@IntOptionConverter() Option<int> id,
+      @StringOptionConverter() Option<String> main,
+      @StringOptionConverter() Option<String> description,
+      @StringOptionConverter() Option<String> icon});
 }
 
 /// @nodoc
@@ -144,21 +157,28 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_Condition implements _Condition {
   const _$_Condition(
-      {required this.id,
-      required this.main,
-      required this.description,
-      required this.icon});
+      {@IntOptionConverter() required this.id,
+      @StringOptionConverter() required this.main,
+      @StringOptionConverter() required this.description,
+      @StringOptionConverter() required this.icon});
+
+  factory _$_Condition.fromJson(Map<String, dynamic> json) =>
+      _$$_ConditionFromJson(json);
 
   @override
+  @IntOptionConverter()
   final Option<int> id;
   @override
+  @StringOptionConverter()
   final Option<String> main;
   @override
+  @StringOptionConverter()
   final Option<String> description;
   @override
+  @StringOptionConverter()
   final Option<String> icon;
 
   @override
@@ -193,22 +213,34 @@ class _$_Condition implements _Condition {
   @override
   _$ConditionCopyWith<_Condition> get copyWith =>
       __$ConditionCopyWithImpl<_Condition>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConditionToJson(this);
+  }
 }
 
 abstract class _Condition implements Condition {
   const factory _Condition(
-      {required Option<int> id,
-      required Option<String> main,
-      required Option<String> description,
-      required Option<String> icon}) = _$_Condition;
+      {@IntOptionConverter() required Option<int> id,
+      @StringOptionConverter() required Option<String> main,
+      @StringOptionConverter() required Option<String> description,
+      @StringOptionConverter() required Option<String> icon}) = _$_Condition;
+
+  factory _Condition.fromJson(Map<String, dynamic> json) =
+      _$_Condition.fromJson;
 
   @override
+  @IntOptionConverter()
   Option<int> get id => throw _privateConstructorUsedError;
   @override
+  @StringOptionConverter()
   Option<String> get main => throw _privateConstructorUsedError;
   @override
+  @StringOptionConverter()
   Option<String> get description => throw _privateConstructorUsedError;
   @override
+  @StringOptionConverter()
   Option<String> get icon => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

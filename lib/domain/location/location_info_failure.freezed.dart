@@ -1,0 +1,177 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+
+part of 'location_info_failure.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
+class _$LocationInfoFailureTearOff {
+  const _$LocationInfoFailureTearOff();
+
+  _NotAvailable notAvailable() {
+    return const _NotAvailable();
+  }
+}
+
+/// @nodoc
+const $LocationInfoFailure = _$LocationInfoFailureTearOff();
+
+/// @nodoc
+mixin _$LocationInfoFailure {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() notAvailable,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? notAvailable,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? notAvailable,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NotAvailable value) notAvailable,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NotAvailable value)? notAvailable,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NotAvailable value)? notAvailable,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LocationInfoFailureCopyWith<$Res> {
+  factory $LocationInfoFailureCopyWith(
+          LocationInfoFailure value, $Res Function(LocationInfoFailure) then) =
+      _$LocationInfoFailureCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$LocationInfoFailureCopyWithImpl<$Res>
+    implements $LocationInfoFailureCopyWith<$Res> {
+  _$LocationInfoFailureCopyWithImpl(this._value, this._then);
+
+  final LocationInfoFailure _value;
+  // ignore: unused_field
+  final $Res Function(LocationInfoFailure) _then;
+}
+
+/// @nodoc
+abstract class _$NotAvailableCopyWith<$Res> {
+  factory _$NotAvailableCopyWith(
+          _NotAvailable value, $Res Function(_NotAvailable) then) =
+      __$NotAvailableCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$NotAvailableCopyWithImpl<$Res>
+    extends _$LocationInfoFailureCopyWithImpl<$Res>
+    implements _$NotAvailableCopyWith<$Res> {
+  __$NotAvailableCopyWithImpl(
+      _NotAvailable _value, $Res Function(_NotAvailable) _then)
+      : super(_value, (v) => _then(v as _NotAvailable));
+
+  @override
+  _NotAvailable get _value => super._value as _NotAvailable;
+}
+
+/// @nodoc
+
+class _$_NotAvailable implements _NotAvailable {
+  const _$_NotAvailable();
+
+  @override
+  String toString() {
+    return 'LocationInfoFailure.notAvailable()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _NotAvailable);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() notAvailable,
+  }) {
+    return notAvailable();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? notAvailable,
+  }) {
+    return notAvailable?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? notAvailable,
+    required TResult orElse(),
+  }) {
+    if (notAvailable != null) {
+      return notAvailable();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NotAvailable value) notAvailable,
+  }) {
+    return notAvailable(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NotAvailable value)? notAvailable,
+  }) {
+    return notAvailable?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NotAvailable value)? notAvailable,
+    required TResult orElse(),
+  }) {
+    if (notAvailable != null) {
+      return notAvailable(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NotAvailable implements LocationInfoFailure {
+  const factory _NotAvailable() = _$_NotAvailable;
+}

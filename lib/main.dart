@@ -1,12 +1,25 @@
+import 'package:flutter/foundation.dart' as fundation;
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_weather/injection.dart';
+import 'package:flutter_weather/presentation/core/app_widget.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:injectable/injectable.dart';
+import 'package:path_provider/path_provider.dart';
 
-import 'generated/l10n.dart';
-
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  HydratedBloc.storage = await HydratedStorage.build(
+    storageDirectory: fundation.kIsWeb
+        ? HydratedStorage.webStorageDirectory
+        : await getTemporaryDirectory(),
+  );
+  configureInjection(Environment.test);
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  runApp(const AppWidget());
 }
 
+/*
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -74,3 +87,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/

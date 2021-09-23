@@ -13,19 +13,27 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+DailyWeather _$DailyWeatherFromJson(Map<String, dynamic> json) {
+  return _DailyWeather.fromJson(json);
+}
+
 /// @nodoc
 class _$DailyWeatherTearOff {
   const _$DailyWeatherTearOff();
 
   _DailyWeather call(
-      {required Option<double> minTemp,
-      required Option<double> maxTemp,
-      required Option<Condition> conditions}) {
+      {@DoubleOptionConverter() required Option<double> minTemp,
+      @DoubleOptionConverter() required Option<double> maxTemp,
+      @ConditionOptionConverter() required Option<Condition> conditions}) {
     return _DailyWeather(
       minTemp: minTemp,
       maxTemp: maxTemp,
       conditions: conditions,
     );
+  }
+
+  DailyWeather fromJson(Map<String, Object> json) {
+    return DailyWeather.fromJson(json);
   }
 }
 
@@ -34,10 +42,14 @@ const $DailyWeather = _$DailyWeatherTearOff();
 
 /// @nodoc
 mixin _$DailyWeather {
+  @DoubleOptionConverter()
   Option<double> get minTemp => throw _privateConstructorUsedError;
+  @DoubleOptionConverter()
   Option<double> get maxTemp => throw _privateConstructorUsedError;
+  @ConditionOptionConverter()
   Option<Condition> get conditions => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $DailyWeatherCopyWith<DailyWeather> get copyWith =>
       throw _privateConstructorUsedError;
@@ -49,9 +61,9 @@ abstract class $DailyWeatherCopyWith<$Res> {
           DailyWeather value, $Res Function(DailyWeather) then) =
       _$DailyWeatherCopyWithImpl<$Res>;
   $Res call(
-      {Option<double> minTemp,
-      Option<double> maxTemp,
-      Option<Condition> conditions});
+      {@DoubleOptionConverter() Option<double> minTemp,
+      @DoubleOptionConverter() Option<double> maxTemp,
+      @ConditionOptionConverter() Option<Condition> conditions});
 }
 
 /// @nodoc
@@ -93,9 +105,9 @@ abstract class _$DailyWeatherCopyWith<$Res>
       __$DailyWeatherCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Option<double> minTemp,
-      Option<double> maxTemp,
-      Option<Condition> conditions});
+      {@DoubleOptionConverter() Option<double> minTemp,
+      @DoubleOptionConverter() Option<double> maxTemp,
+      @ConditionOptionConverter() Option<Condition> conditions});
 }
 
 /// @nodoc
@@ -132,16 +144,24 @@ class __$DailyWeatherCopyWithImpl<$Res> extends _$DailyWeatherCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_DailyWeather implements _DailyWeather {
   const _$_DailyWeather(
-      {required this.minTemp, required this.maxTemp, required this.conditions});
+      {@DoubleOptionConverter() required this.minTemp,
+      @DoubleOptionConverter() required this.maxTemp,
+      @ConditionOptionConverter() required this.conditions});
+
+  factory _$_DailyWeather.fromJson(Map<String, dynamic> json) =>
+      _$$_DailyWeatherFromJson(json);
 
   @override
+  @DoubleOptionConverter()
   final Option<double> minTemp;
   @override
+  @DoubleOptionConverter()
   final Option<double> maxTemp;
   @override
+  @ConditionOptionConverter()
   final Option<Condition> conditions;
 
   @override
@@ -175,19 +195,31 @@ class _$_DailyWeather implements _DailyWeather {
   @override
   _$DailyWeatherCopyWith<_DailyWeather> get copyWith =>
       __$DailyWeatherCopyWithImpl<_DailyWeather>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DailyWeatherToJson(this);
+  }
 }
 
 abstract class _DailyWeather implements DailyWeather {
   const factory _DailyWeather(
-      {required Option<double> minTemp,
-      required Option<double> maxTemp,
-      required Option<Condition> conditions}) = _$_DailyWeather;
+          {@DoubleOptionConverter() required Option<double> minTemp,
+          @DoubleOptionConverter() required Option<double> maxTemp,
+          @ConditionOptionConverter() required Option<Condition> conditions}) =
+      _$_DailyWeather;
+
+  factory _DailyWeather.fromJson(Map<String, dynamic> json) =
+      _$_DailyWeather.fromJson;
 
   @override
+  @DoubleOptionConverter()
   Option<double> get minTemp => throw _privateConstructorUsedError;
   @override
+  @DoubleOptionConverter()
   Option<double> get maxTemp => throw _privateConstructorUsedError;
   @override
+  @ConditionOptionConverter()
   Option<Condition> get conditions => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
