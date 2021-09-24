@@ -23,6 +23,7 @@ class _$WeatherTearOff {
 
   _Weather call(
       {required LocationInfo locationInfo,
+      required DateTime timeOfCall,
       @DoubleOptionConverter() required Option<double> temperature,
       @DoubleOptionConverter() required Option<double> humidity,
       @DoubleOptionConverter() required Option<double> presure,
@@ -33,6 +34,7 @@ class _$WeatherTearOff {
       required Map<DateTime, DailyWeather> dailyWeather}) {
     return _Weather(
       locationInfo: locationInfo,
+      timeOfCall: timeOfCall,
       temperature: temperature,
       humidity: humidity,
       presure: presure,
@@ -55,6 +57,7 @@ const $Weather = _$WeatherTearOff();
 /// @nodoc
 mixin _$Weather {
   LocationInfo get locationInfo => throw _privateConstructorUsedError;
+  DateTime get timeOfCall => throw _privateConstructorUsedError;
   @DoubleOptionConverter()
   Option<double> get temperature => throw _privateConstructorUsedError;
   @DoubleOptionConverter()
@@ -82,6 +85,7 @@ abstract class $WeatherCopyWith<$Res> {
       _$WeatherCopyWithImpl<$Res>;
   $Res call(
       {LocationInfo locationInfo,
+      DateTime timeOfCall,
       @DoubleOptionConverter() Option<double> temperature,
       @DoubleOptionConverter() Option<double> humidity,
       @DoubleOptionConverter() Option<double> presure,
@@ -105,6 +109,7 @@ class _$WeatherCopyWithImpl<$Res> implements $WeatherCopyWith<$Res> {
   @override
   $Res call({
     Object? locationInfo = freezed,
+    Object? timeOfCall = freezed,
     Object? temperature = freezed,
     Object? humidity = freezed,
     Object? presure = freezed,
@@ -119,6 +124,10 @@ class _$WeatherCopyWithImpl<$Res> implements $WeatherCopyWith<$Res> {
           ? _value.locationInfo
           : locationInfo // ignore: cast_nullable_to_non_nullable
               as LocationInfo,
+      timeOfCall: timeOfCall == freezed
+          ? _value.timeOfCall
+          : timeOfCall // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       temperature: temperature == freezed
           ? _value.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
@@ -169,6 +178,7 @@ abstract class _$WeatherCopyWith<$Res> implements $WeatherCopyWith<$Res> {
   @override
   $Res call(
       {LocationInfo locationInfo,
+      DateTime timeOfCall,
       @DoubleOptionConverter() Option<double> temperature,
       @DoubleOptionConverter() Option<double> humidity,
       @DoubleOptionConverter() Option<double> presure,
@@ -194,6 +204,7 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
   @override
   $Res call({
     Object? locationInfo = freezed,
+    Object? timeOfCall = freezed,
     Object? temperature = freezed,
     Object? humidity = freezed,
     Object? presure = freezed,
@@ -208,6 +219,10 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
           ? _value.locationInfo
           : locationInfo // ignore: cast_nullable_to_non_nullable
               as LocationInfo,
+      timeOfCall: timeOfCall == freezed
+          ? _value.timeOfCall
+          : timeOfCall // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       temperature: temperature == freezed
           ? _value.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
@@ -249,6 +264,7 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
 class _$_Weather implements _Weather {
   const _$_Weather(
       {required this.locationInfo,
+      required this.timeOfCall,
       @DoubleOptionConverter() required this.temperature,
       @DoubleOptionConverter() required this.humidity,
       @DoubleOptionConverter() required this.presure,
@@ -263,6 +279,8 @@ class _$_Weather implements _Weather {
 
   @override
   final LocationInfo locationInfo;
+  @override
+  final DateTime timeOfCall;
   @override
   @DoubleOptionConverter()
   final Option<double> temperature;
@@ -288,7 +306,7 @@ class _$_Weather implements _Weather {
 
   @override
   String toString() {
-    return 'Weather(locationInfo: $locationInfo, temperature: $temperature, humidity: $humidity, presure: $presure, windSpeed: $windSpeed, sunrise: $sunrise, sunset: $sunset, conditions: $conditions, dailyWeather: $dailyWeather)';
+    return 'Weather(locationInfo: $locationInfo, timeOfCall: $timeOfCall, temperature: $temperature, humidity: $humidity, presure: $presure, windSpeed: $windSpeed, sunrise: $sunrise, sunset: $sunset, conditions: $conditions, dailyWeather: $dailyWeather)';
   }
 
   @override
@@ -298,6 +316,9 @@ class _$_Weather implements _Weather {
             (identical(other.locationInfo, locationInfo) ||
                 const DeepCollectionEquality()
                     .equals(other.locationInfo, locationInfo)) &&
+            (identical(other.timeOfCall, timeOfCall) ||
+                const DeepCollectionEquality()
+                    .equals(other.timeOfCall, timeOfCall)) &&
             (identical(other.temperature, temperature) ||
                 const DeepCollectionEquality()
                     .equals(other.temperature, temperature)) &&
@@ -327,6 +348,7 @@ class _$_Weather implements _Weather {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(locationInfo) ^
+      const DeepCollectionEquality().hash(timeOfCall) ^
       const DeepCollectionEquality().hash(temperature) ^
       const DeepCollectionEquality().hash(humidity) ^
       const DeepCollectionEquality().hash(presure) ^
@@ -350,6 +372,7 @@ class _$_Weather implements _Weather {
 abstract class _Weather implements Weather {
   const factory _Weather(
       {required LocationInfo locationInfo,
+      required DateTime timeOfCall,
       @DoubleOptionConverter() required Option<double> temperature,
       @DoubleOptionConverter() required Option<double> humidity,
       @DoubleOptionConverter() required Option<double> presure,
@@ -363,6 +386,8 @@ abstract class _Weather implements Weather {
 
   @override
   LocationInfo get locationInfo => throw _privateConstructorUsedError;
+  @override
+  DateTime get timeOfCall => throw _privateConstructorUsedError;
   @override
   @DoubleOptionConverter()
   Option<double> get temperature => throw _privateConstructorUsedError;

@@ -5,5 +5,5 @@ import 'location_info_failure.dart';
 
 abstract class ILocationInfoFacade {
   Either<LocationInfoFailure, LocationInfo> getLocationInfo();
-  Future<Either<LocationInfoFailure, LocationInfo>> updateLocation();
+  Future<Option<LocationInfoFailure>> updateLocation();
 }

@@ -59,6 +59,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Temperature`
+  String get temperature {
+    return Intl.message(
+      'Temperature',
+      name: 'temperature',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Humidity`
+  String get humidity {
+    return Intl.message(
+      'Humidity',
+      name: 'humidity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Presure`
+  String get presure {
+    return Intl.message(
+      'Presure',
+      name: 'presure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `min`
+  String get min {
+    return Intl.message(
+      'min',
+      name: 'min',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `max`
+  String get max {
+    return Intl.message(
+      'max',
+      name: 'max',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Day`
+  String get day {
+    return Intl.message(
+      'Day',
+      name: 'day',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nigth`
+  String get nigth {
+    return Intl.message(
+      'Nigth',
+      name: 'nigth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wind Speed`
+  String get windSpeed {
+    return Intl.message(
+      'Wind Speed',
+      name: 'windSpeed',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,4 +1,12 @@
 {
 	"@@locale": "en",
-	"title": "Wheather"
+	"title": "Wheather",
+	"temperature": "Temperature",
+	"humidity": "Humidity",
+	"presure": "Presure",
+	"min": "min",
+	"max": "max",
+	"day": "Day",
+	"nigth": "Nigth",
+	"windSpeed": "Wind Speed"
 }

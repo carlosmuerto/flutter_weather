@@ -12,6 +12,7 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(const AssetImage('assets/background.jpg'), context);
     return BlocProvider(
       create: (context) => getIt<WeatherCubit>()..update(),
       child: MaterialApp(
@@ -23,6 +24,14 @@ class AppWidget extends StatelessWidget {
           S.delegate,
         ],
         supportedLocales: S.delegate.supportedLocales,
+        theme: ThemeData().copyWith(
+          textTheme: const TextTheme().copyWith(
+            bodyText1:
+                const TextStyle().copyWith(color: const Color(0xEEEEEEFF)),
+            bodyText2:
+                const TextStyle().copyWith(color: const Color(0xEEEEEEFF)),
+          ),
+        ),
         home: const WeatherPage(),
       ),
     );

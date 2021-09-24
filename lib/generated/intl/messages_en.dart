@@ -21,6 +21,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "title": MessageLookupByLibrary.simpleMessage("Wheather")
+        "day": MessageLookupByLibrary.simpleMessage("Day"),
+        "humidity": MessageLookupByLibrary.simpleMessage("Humidity"),
+        "max": MessageLookupByLibrary.simpleMessage("max"),
+        "min": MessageLookupByLibrary.simpleMessage("min"),
+        "nigth": MessageLookupByLibrary.simpleMessage("Nigth"),
+        "presure": MessageLookupByLibrary.simpleMessage("Presure"),
+        "temperature": MessageLookupByLibrary.simpleMessage("Temperature"),
+        "title": MessageLookupByLibrary.simpleMessage("Wheather"),
+        "windSpeed": MessageLookupByLibrary.simpleMessage("Wind Speed")
       };
 }

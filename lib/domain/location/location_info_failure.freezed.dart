@@ -13,12 +13,20 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+LocationInfoFailure _$LocationInfoFailureFromJson(Map<String, dynamic> json) {
+  return _NotAvailable.fromJson(json);
+}
+
 /// @nodoc
 class _$LocationInfoFailureTearOff {
   const _$LocationInfoFailureTearOff();
 
   _NotAvailable notAvailable() {
     return const _NotAvailable();
+  }
+
+  LocationInfoFailure fromJson(Map<String, Object> json) {
+    return LocationInfoFailure.fromJson(json);
   }
 }
 
@@ -59,6 +67,7 @@ mixin _$LocationInfoFailure {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -98,9 +107,12 @@ class __$NotAvailableCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_NotAvailable implements _NotAvailable {
   const _$_NotAvailable();
+
+  factory _$_NotAvailable.fromJson(Map<String, dynamic> json) =>
+      _$$_NotAvailableFromJson(json);
 
   @override
   String toString() {
@@ -170,8 +182,16 @@ class _$_NotAvailable implements _NotAvailable {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_NotAvailableToJson(this);
+  }
 }
 
 abstract class _NotAvailable implements LocationInfoFailure {
   const factory _NotAvailable() = _$_NotAvailable;
+
+  factory _NotAvailable.fromJson(Map<String, dynamic> json) =
+      _$_NotAvailable.fromJson;
 }

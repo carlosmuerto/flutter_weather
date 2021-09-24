@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:dartz/dartz.dart';
 import 'package:flutter_weather/domain/location/location_info.dart';
 import 'package:flutter_weather/domain/weather/condition.dart';
@@ -12,15 +14,22 @@ import 'mockup_cases.dart';
 @LazySingleton(as: IWeatherFacade, env: [Environment.test])
 class MockupIWeatherFacade implements IWeatherFacade {
   final MockupCase mockupCase = MockupCase.noErrors();
-  final MockupWeatherLocationIntercase mockupLocation;
 
-  MockupIWeatherFacade(this.mockupLocation);
+  MockupIWeatherFacade();
 
   @override
-  Future<Either<WeatherFailure, Weather>> read() async => mockupCase.when(
+  Future<Either<WeatherFailure, Weather>> read(
+          double lat, double lng, String lang) async =>
+      mockupCase.when(
         noErrors: () async => right(
           Weather(
-            locationInfo: await mockupLocation.getLocationInfo(),
+            locationInfo: LocationInfo(
+              lat: lat,
+              lng: lng,
+              lang: lang,
+              name: "Mockup/lorem City",
+            ),
+            timeOfCall: DateTime.now(),
             temperature: optionOf(23.0),
             humidity: optionOf(50.0),
             presure: optionOf(5.0),
@@ -36,20 +45,7 @@ class MockupIWeatherFacade implements IWeatherFacade {
                 icon: optionOf("icon"),
               ),
             ),
-            dailyWeather: {
-              DateTime.now().add(const Duration(days: 1)): DailyWeather(
-                minTemp: optionOf(19.0),
-                maxTemp: optionOf(25.0),
-                conditions: optionOf(
-                  Condition(
-                    id: optionOf(1),
-                    main: optionOf("main"),
-                    description: optionOf("description"),
-                    icon: optionOf("icon"),
-                  ),
-                ),
-              )
-            },
+            dailyWeather: _genDailyWeather(DateTime.now()),
           ),
         ),
         internetError: () => Future.delayed(const Duration(seconds: 3)).then(
@@ -60,6 +56,28 @@ class MockupIWeatherFacade implements IWeatherFacade {
       );
 }
 
-abstract class MockupWeatherLocationIntercase {
-  Future<LocationInfo> getLocationInfo();
+extension _RandomNextInt on Random {
+  int nextIntRanged(int min, int max) => min + nextInt(max - min);
+}
+
+Map<DateTime, DailyWeather> _genDailyWeather(DateTime today) {
+  Map<DateTime, DailyWeather> entries = {};
+  final rnd = Random();
+  for (var dayPluss = 0; dayPluss < 5; dayPluss++) {
+    entries[today.add(Duration(days: dayPluss))] = DailyWeather(
+      minTemp: optionOf(19.0 + rnd.nextIntRanged(-1, 4)),
+      nigthTemp: optionOf(21.0 + rnd.nextIntRanged(-1, 1)),
+      dayTemp: optionOf(23.0 + rnd.nextIntRanged(-1, 1)),
+      maxTemp: optionOf(25.0 + rnd.nextIntRanged(-2, 5)),
+      conditions: optionOf(
+        Condition(
+          id: optionOf(1),
+          main: optionOf("main"),
+          description: optionOf("description"),
+          icon: optionOf("icon"),
+        ),
+      ),
+    );
+  }
+  return entries;
 }

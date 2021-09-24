@@ -13,6 +13,7 @@ part 'weather.g.dart';
 class Weather with _$Weather {
   const factory Weather({
     required LocationInfo locationInfo,
+    required DateTime timeOfCall,
     @DoubleOptionConverter() required Option<double> temperature,
     @DoubleOptionConverter() required Option<double> humidity,
     @DoubleOptionConverter() required Option<double> presure,

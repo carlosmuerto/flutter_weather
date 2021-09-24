@@ -1,4 +1,10 @@
 {
 	"@@locale": "es",
-	"title": "Clima"
+	"title": "Clima",
+	"temperature": "Temperatura",
+	"humidity": "Humedad",
+	"presure": "Presion",
+	"day": "Dia",
+	"nigth": "Noche",
+	"windSpeed": "Vel. Viendo"
 }

@@ -24,10 +24,14 @@ class _$DailyWeatherTearOff {
   _DailyWeather call(
       {@DoubleOptionConverter() required Option<double> minTemp,
       @DoubleOptionConverter() required Option<double> maxTemp,
+      @DoubleOptionConverter() required Option<double> dayTemp,
+      @DoubleOptionConverter() required Option<double> nigthTemp,
       @ConditionOptionConverter() required Option<Condition> conditions}) {
     return _DailyWeather(
       minTemp: minTemp,
       maxTemp: maxTemp,
+      dayTemp: dayTemp,
+      nigthTemp: nigthTemp,
       conditions: conditions,
     );
   }
@@ -46,6 +50,10 @@ mixin _$DailyWeather {
   Option<double> get minTemp => throw _privateConstructorUsedError;
   @DoubleOptionConverter()
   Option<double> get maxTemp => throw _privateConstructorUsedError;
+  @DoubleOptionConverter()
+  Option<double> get dayTemp => throw _privateConstructorUsedError;
+  @DoubleOptionConverter()
+  Option<double> get nigthTemp => throw _privateConstructorUsedError;
   @ConditionOptionConverter()
   Option<Condition> get conditions => throw _privateConstructorUsedError;
 
@@ -63,6 +71,8 @@ abstract class $DailyWeatherCopyWith<$Res> {
   $Res call(
       {@DoubleOptionConverter() Option<double> minTemp,
       @DoubleOptionConverter() Option<double> maxTemp,
+      @DoubleOptionConverter() Option<double> dayTemp,
+      @DoubleOptionConverter() Option<double> nigthTemp,
       @ConditionOptionConverter() Option<Condition> conditions});
 }
 
@@ -78,6 +88,8 @@ class _$DailyWeatherCopyWithImpl<$Res> implements $DailyWeatherCopyWith<$Res> {
   $Res call({
     Object? minTemp = freezed,
     Object? maxTemp = freezed,
+    Object? dayTemp = freezed,
+    Object? nigthTemp = freezed,
     Object? conditions = freezed,
   }) {
     return _then(_value.copyWith(
@@ -88,6 +100,14 @@ class _$DailyWeatherCopyWithImpl<$Res> implements $DailyWeatherCopyWith<$Res> {
       maxTemp: maxTemp == freezed
           ? _value.maxTemp
           : maxTemp // ignore: cast_nullable_to_non_nullable
+              as Option<double>,
+      dayTemp: dayTemp == freezed
+          ? _value.dayTemp
+          : dayTemp // ignore: cast_nullable_to_non_nullable
+              as Option<double>,
+      nigthTemp: nigthTemp == freezed
+          ? _value.nigthTemp
+          : nigthTemp // ignore: cast_nullable_to_non_nullable
               as Option<double>,
       conditions: conditions == freezed
           ? _value.conditions
@@ -107,6 +127,8 @@ abstract class _$DailyWeatherCopyWith<$Res>
   $Res call(
       {@DoubleOptionConverter() Option<double> minTemp,
       @DoubleOptionConverter() Option<double> maxTemp,
+      @DoubleOptionConverter() Option<double> dayTemp,
+      @DoubleOptionConverter() Option<double> nigthTemp,
       @ConditionOptionConverter() Option<Condition> conditions});
 }
 
@@ -124,6 +146,8 @@ class __$DailyWeatherCopyWithImpl<$Res> extends _$DailyWeatherCopyWithImpl<$Res>
   $Res call({
     Object? minTemp = freezed,
     Object? maxTemp = freezed,
+    Object? dayTemp = freezed,
+    Object? nigthTemp = freezed,
     Object? conditions = freezed,
   }) {
     return _then(_DailyWeather(
@@ -134,6 +158,14 @@ class __$DailyWeatherCopyWithImpl<$Res> extends _$DailyWeatherCopyWithImpl<$Res>
       maxTemp: maxTemp == freezed
           ? _value.maxTemp
           : maxTemp // ignore: cast_nullable_to_non_nullable
+              as Option<double>,
+      dayTemp: dayTemp == freezed
+          ? _value.dayTemp
+          : dayTemp // ignore: cast_nullable_to_non_nullable
+              as Option<double>,
+      nigthTemp: nigthTemp == freezed
+          ? _value.nigthTemp
+          : nigthTemp // ignore: cast_nullable_to_non_nullable
               as Option<double>,
       conditions: conditions == freezed
           ? _value.conditions
@@ -149,6 +181,8 @@ class _$_DailyWeather implements _DailyWeather {
   const _$_DailyWeather(
       {@DoubleOptionConverter() required this.minTemp,
       @DoubleOptionConverter() required this.maxTemp,
+      @DoubleOptionConverter() required this.dayTemp,
+      @DoubleOptionConverter() required this.nigthTemp,
       @ConditionOptionConverter() required this.conditions});
 
   factory _$_DailyWeather.fromJson(Map<String, dynamic> json) =>
@@ -161,12 +195,18 @@ class _$_DailyWeather implements _DailyWeather {
   @DoubleOptionConverter()
   final Option<double> maxTemp;
   @override
+  @DoubleOptionConverter()
+  final Option<double> dayTemp;
+  @override
+  @DoubleOptionConverter()
+  final Option<double> nigthTemp;
+  @override
   @ConditionOptionConverter()
   final Option<Condition> conditions;
 
   @override
   String toString() {
-    return 'DailyWeather(minTemp: $minTemp, maxTemp: $maxTemp, conditions: $conditions)';
+    return 'DailyWeather(minTemp: $minTemp, maxTemp: $maxTemp, dayTemp: $dayTemp, nigthTemp: $nigthTemp, conditions: $conditions)';
   }
 
   @override
@@ -179,6 +219,12 @@ class _$_DailyWeather implements _DailyWeather {
             (identical(other.maxTemp, maxTemp) ||
                 const DeepCollectionEquality()
                     .equals(other.maxTemp, maxTemp)) &&
+            (identical(other.dayTemp, dayTemp) ||
+                const DeepCollectionEquality()
+                    .equals(other.dayTemp, dayTemp)) &&
+            (identical(other.nigthTemp, nigthTemp) ||
+                const DeepCollectionEquality()
+                    .equals(other.nigthTemp, nigthTemp)) &&
             (identical(other.conditions, conditions) ||
                 const DeepCollectionEquality()
                     .equals(other.conditions, conditions)));
@@ -189,6 +235,8 @@ class _$_DailyWeather implements _DailyWeather {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(minTemp) ^
       const DeepCollectionEquality().hash(maxTemp) ^
+      const DeepCollectionEquality().hash(dayTemp) ^
+      const DeepCollectionEquality().hash(nigthTemp) ^
       const DeepCollectionEquality().hash(conditions);
 
   @JsonKey(ignore: true)
@@ -206,6 +254,8 @@ abstract class _DailyWeather implements DailyWeather {
   const factory _DailyWeather(
           {@DoubleOptionConverter() required Option<double> minTemp,
           @DoubleOptionConverter() required Option<double> maxTemp,
+          @DoubleOptionConverter() required Option<double> dayTemp,
+          @DoubleOptionConverter() required Option<double> nigthTemp,
           @ConditionOptionConverter() required Option<Condition> conditions}) =
       _$_DailyWeather;
 
@@ -218,6 +268,12 @@ abstract class _DailyWeather implements DailyWeather {
   @override
   @DoubleOptionConverter()
   Option<double> get maxTemp => throw _privateConstructorUsedError;
+  @override
+  @DoubleOptionConverter()
+  Option<double> get dayTemp => throw _privateConstructorUsedError;
+  @override
+  @DoubleOptionConverter()
+  Option<double> get nigthTemp => throw _privateConstructorUsedError;
   @override
   @ConditionOptionConverter()
   Option<Condition> get conditions => throw _privateConstructorUsedError;
