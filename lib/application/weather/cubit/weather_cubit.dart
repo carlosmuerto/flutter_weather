@@ -18,10 +18,16 @@ class WeatherCubit extends Cubit<WeatherState> {
   WeatherCubit(this.weatherFacade, this.locationInfoFacade)
       : super(const WeatherState.initial());
 
+/*
   @override
   void onChange(Change<WeatherState> change) {
     debugPrint("${change.toString()}\n");
     super.onChange(change);
+  }
+  */
+
+  void setWeatherManually(Weather weather) {
+    emit(WeatherState.loadSuccess(weather: weather));
   }
 
   void update() {
@@ -33,7 +39,7 @@ class WeatherCubit extends Cubit<WeatherState> {
                       failure: WeatherFailure.locationFailure(locFailure),
                     )),
                 (locInfo) => weatherFacade
-                    .read(locInfo.lat, locInfo.lng, locInfo.lang)
+                    .fechNewWeather(locInfo.lat, locInfo.lng, locInfo.lang)
                     .then(
                       (weatherOrFailure) => weatherOrFailure.fold(
                         (failure) => emit(

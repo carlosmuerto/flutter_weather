@@ -16,7 +16,7 @@ class Weather with _$Weather {
     required DateTime timeOfCall,
     @DoubleOptionConverter() required Option<double> temperature,
     @DoubleOptionConverter() required Option<double> humidity,
-    @DoubleOptionConverter() required Option<double> presure,
+    @DoubleOptionConverter() required Option<double> pressure,
     @DoubleOptionConverter() required Option<double> windSpeed,
     @DateTimeOptionConverter() required Option<DateTime> sunrise,
     @DateTimeOptionConverter() required Option<DateTime> sunset,

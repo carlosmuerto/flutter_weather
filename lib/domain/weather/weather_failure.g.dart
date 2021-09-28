@@ -21,3 +21,20 @@ Map<String, dynamic> _$$_LocationFailureToJson(_$_LocationFailure instance) =>
     <String, dynamic>{
       'failure': instance.failure.toJson(),
     };
+
+_$_NoApiKey _$$_NoApiKeyFromJson(Map<String, dynamic> json) => _$_NoApiKey();
+
+Map<String, dynamic> _$$_NoApiKeyToJson(_$_NoApiKey instance) =>
+    <String, dynamic>{};
+
+_$_NotHandledException _$$_NotHandledExceptionFromJson(
+        Map<String, dynamic> json) =>
+    _$_NotHandledException(
+      e: json['e'] as Object,
+    );
+
+Map<String, dynamic> _$$_NotHandledExceptionToJson(
+        _$_NotHandledException instance) =>
+    <String, dynamic>{
+      'e': instance.e,
+    };

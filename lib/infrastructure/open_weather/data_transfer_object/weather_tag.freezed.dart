@@ -148,8 +148,9 @@ class __$WeatherTagDtoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_WeatherTagDto implements _WeatherTagDto {
-  const _$_WeatherTagDto({this.id, this.main, this.description, this.icon});
+class _$_WeatherTagDto extends _WeatherTagDto {
+  const _$_WeatherTagDto({this.id, this.main, this.description, this.icon})
+      : super._();
 
   factory _$_WeatherTagDto.fromJson(Map<String, dynamic> json) =>
       _$$_WeatherTagDtoFromJson(json);
@@ -202,12 +203,13 @@ class _$_WeatherTagDto implements _WeatherTagDto {
   }
 }
 
-abstract class _WeatherTagDto implements WeatherTagDto {
+abstract class _WeatherTagDto extends WeatherTagDto {
   const factory _WeatherTagDto(
       {int? id,
       String? main,
       String? description,
       String? icon}) = _$_WeatherTagDto;
+  const _WeatherTagDto._() : super._();
 
   factory _WeatherTagDto.fromJson(Map<String, dynamic> json) =
       _$_WeatherTagDto.fromJson;

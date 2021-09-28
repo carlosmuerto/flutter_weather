@@ -25,13 +25,13 @@ class _$DailyWeatherTearOff {
       {@DoubleOptionConverter() required Option<double> minTemp,
       @DoubleOptionConverter() required Option<double> maxTemp,
       @DoubleOptionConverter() required Option<double> dayTemp,
-      @DoubleOptionConverter() required Option<double> nigthTemp,
-      @ConditionOptionConverter() required Option<Condition> conditions}) {
+      @DoubleOptionConverter() required Option<double> nightTemp,
+      @ConditionOptionConverter() required List<Condition> conditions}) {
     return _DailyWeather(
       minTemp: minTemp,
       maxTemp: maxTemp,
       dayTemp: dayTemp,
-      nigthTemp: nigthTemp,
+      nightTemp: nightTemp,
       conditions: conditions,
     );
   }
@@ -53,9 +53,9 @@ mixin _$DailyWeather {
   @DoubleOptionConverter()
   Option<double> get dayTemp => throw _privateConstructorUsedError;
   @DoubleOptionConverter()
-  Option<double> get nigthTemp => throw _privateConstructorUsedError;
+  Option<double> get nightTemp => throw _privateConstructorUsedError;
   @ConditionOptionConverter()
-  Option<Condition> get conditions => throw _privateConstructorUsedError;
+  List<Condition> get conditions => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -72,8 +72,8 @@ abstract class $DailyWeatherCopyWith<$Res> {
       {@DoubleOptionConverter() Option<double> minTemp,
       @DoubleOptionConverter() Option<double> maxTemp,
       @DoubleOptionConverter() Option<double> dayTemp,
-      @DoubleOptionConverter() Option<double> nigthTemp,
-      @ConditionOptionConverter() Option<Condition> conditions});
+      @DoubleOptionConverter() Option<double> nightTemp,
+      @ConditionOptionConverter() List<Condition> conditions});
 }
 
 /// @nodoc
@@ -89,7 +89,7 @@ class _$DailyWeatherCopyWithImpl<$Res> implements $DailyWeatherCopyWith<$Res> {
     Object? minTemp = freezed,
     Object? maxTemp = freezed,
     Object? dayTemp = freezed,
-    Object? nigthTemp = freezed,
+    Object? nightTemp = freezed,
     Object? conditions = freezed,
   }) {
     return _then(_value.copyWith(
@@ -105,14 +105,14 @@ class _$DailyWeatherCopyWithImpl<$Res> implements $DailyWeatherCopyWith<$Res> {
           ? _value.dayTemp
           : dayTemp // ignore: cast_nullable_to_non_nullable
               as Option<double>,
-      nigthTemp: nigthTemp == freezed
-          ? _value.nigthTemp
-          : nigthTemp // ignore: cast_nullable_to_non_nullable
+      nightTemp: nightTemp == freezed
+          ? _value.nightTemp
+          : nightTemp // ignore: cast_nullable_to_non_nullable
               as Option<double>,
       conditions: conditions == freezed
           ? _value.conditions
           : conditions // ignore: cast_nullable_to_non_nullable
-              as Option<Condition>,
+              as List<Condition>,
     ));
   }
 }
@@ -128,8 +128,8 @@ abstract class _$DailyWeatherCopyWith<$Res>
       {@DoubleOptionConverter() Option<double> minTemp,
       @DoubleOptionConverter() Option<double> maxTemp,
       @DoubleOptionConverter() Option<double> dayTemp,
-      @DoubleOptionConverter() Option<double> nigthTemp,
-      @ConditionOptionConverter() Option<Condition> conditions});
+      @DoubleOptionConverter() Option<double> nightTemp,
+      @ConditionOptionConverter() List<Condition> conditions});
 }
 
 /// @nodoc
@@ -147,7 +147,7 @@ class __$DailyWeatherCopyWithImpl<$Res> extends _$DailyWeatherCopyWithImpl<$Res>
     Object? minTemp = freezed,
     Object? maxTemp = freezed,
     Object? dayTemp = freezed,
-    Object? nigthTemp = freezed,
+    Object? nightTemp = freezed,
     Object? conditions = freezed,
   }) {
     return _then(_DailyWeather(
@@ -163,14 +163,14 @@ class __$DailyWeatherCopyWithImpl<$Res> extends _$DailyWeatherCopyWithImpl<$Res>
           ? _value.dayTemp
           : dayTemp // ignore: cast_nullable_to_non_nullable
               as Option<double>,
-      nigthTemp: nigthTemp == freezed
-          ? _value.nigthTemp
-          : nigthTemp // ignore: cast_nullable_to_non_nullable
+      nightTemp: nightTemp == freezed
+          ? _value.nightTemp
+          : nightTemp // ignore: cast_nullable_to_non_nullable
               as Option<double>,
       conditions: conditions == freezed
           ? _value.conditions
           : conditions // ignore: cast_nullable_to_non_nullable
-              as Option<Condition>,
+              as List<Condition>,
     ));
   }
 }
@@ -182,7 +182,7 @@ class _$_DailyWeather implements _DailyWeather {
       {@DoubleOptionConverter() required this.minTemp,
       @DoubleOptionConverter() required this.maxTemp,
       @DoubleOptionConverter() required this.dayTemp,
-      @DoubleOptionConverter() required this.nigthTemp,
+      @DoubleOptionConverter() required this.nightTemp,
       @ConditionOptionConverter() required this.conditions});
 
   factory _$_DailyWeather.fromJson(Map<String, dynamic> json) =>
@@ -199,14 +199,14 @@ class _$_DailyWeather implements _DailyWeather {
   final Option<double> dayTemp;
   @override
   @DoubleOptionConverter()
-  final Option<double> nigthTemp;
+  final Option<double> nightTemp;
   @override
   @ConditionOptionConverter()
-  final Option<Condition> conditions;
+  final List<Condition> conditions;
 
   @override
   String toString() {
-    return 'DailyWeather(minTemp: $minTemp, maxTemp: $maxTemp, dayTemp: $dayTemp, nigthTemp: $nigthTemp, conditions: $conditions)';
+    return 'DailyWeather(minTemp: $minTemp, maxTemp: $maxTemp, dayTemp: $dayTemp, nightTemp: $nightTemp, conditions: $conditions)';
   }
 
   @override
@@ -222,9 +222,9 @@ class _$_DailyWeather implements _DailyWeather {
             (identical(other.dayTemp, dayTemp) ||
                 const DeepCollectionEquality()
                     .equals(other.dayTemp, dayTemp)) &&
-            (identical(other.nigthTemp, nigthTemp) ||
+            (identical(other.nightTemp, nightTemp) ||
                 const DeepCollectionEquality()
-                    .equals(other.nigthTemp, nigthTemp)) &&
+                    .equals(other.nightTemp, nightTemp)) &&
             (identical(other.conditions, conditions) ||
                 const DeepCollectionEquality()
                     .equals(other.conditions, conditions)));
@@ -236,7 +236,7 @@ class _$_DailyWeather implements _DailyWeather {
       const DeepCollectionEquality().hash(minTemp) ^
       const DeepCollectionEquality().hash(maxTemp) ^
       const DeepCollectionEquality().hash(dayTemp) ^
-      const DeepCollectionEquality().hash(nigthTemp) ^
+      const DeepCollectionEquality().hash(nightTemp) ^
       const DeepCollectionEquality().hash(conditions);
 
   @JsonKey(ignore: true)
@@ -255,8 +255,8 @@ abstract class _DailyWeather implements DailyWeather {
           {@DoubleOptionConverter() required Option<double> minTemp,
           @DoubleOptionConverter() required Option<double> maxTemp,
           @DoubleOptionConverter() required Option<double> dayTemp,
-          @DoubleOptionConverter() required Option<double> nigthTemp,
-          @ConditionOptionConverter() required Option<Condition> conditions}) =
+          @DoubleOptionConverter() required Option<double> nightTemp,
+          @ConditionOptionConverter() required List<Condition> conditions}) =
       _$_DailyWeather;
 
   factory _DailyWeather.fromJson(Map<String, dynamic> json) =
@@ -273,10 +273,10 @@ abstract class _DailyWeather implements DailyWeather {
   Option<double> get dayTemp => throw _privateConstructorUsedError;
   @override
   @DoubleOptionConverter()
-  Option<double> get nigthTemp => throw _privateConstructorUsedError;
+  Option<double> get nightTemp => throw _privateConstructorUsedError;
   @override
   @ConditionOptionConverter()
-  Option<Condition> get conditions => throw _privateConstructorUsedError;
+  List<Condition> get conditions => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DailyWeatherCopyWith<_DailyWeather> get copyWith =>

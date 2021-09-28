@@ -13,8 +13,8 @@ class DailyWeather with _$DailyWeather {
     @DoubleOptionConverter() required Option<double> minTemp,
     @DoubleOptionConverter() required Option<double> maxTemp,
     @DoubleOptionConverter() required Option<double> dayTemp,
-    @DoubleOptionConverter() required Option<double> nigthTemp,
-    @ConditionOptionConverter() required Option<Condition> conditions,
+    @DoubleOptionConverter() required Option<double> nightTemp,
+    @ConditionOptionConverter() required List<Condition> conditions,
   }) = _DailyWeather;
 
   factory DailyWeather.fromJson(Map<String, dynamic> json) =>

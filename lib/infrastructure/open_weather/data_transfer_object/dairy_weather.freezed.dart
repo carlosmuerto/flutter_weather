@@ -27,20 +27,20 @@ class _$DailyWeatherDtoTearOff {
       int? sunset,
       int? moonrise,
       int? moonset,
-      double? moonPhase,
+      @JsonKey(name: 'moon_phase') double? moonPhase,
       TempDto? temp,
-      FeelsLikeDto? feelsLike,
+      @JsonKey(name: 'feels_like') FeelsLikeDto? feelsLike,
       int? pressure,
       int? humidity,
-      double? dewPoint,
-      double? windSpeed,
-      int? windDeg,
-      double? windGust,
+      @JsonKey(name: 'dew_point') double? dewPoint,
+      @JsonKey(name: 'wind_speed') double? windSpeed,
+      @JsonKey(name: 'wind_deg') double? windDeg,
+      @JsonKey(name: 'wind_gust') double? windGust,
       List<WeatherTagDto>? weather,
       int? clouds,
       double? pop,
       double? uvi,
-      double? rain}) {
+      RainDto? rain}) {
     return _DailyWeather(
       dt: dt,
       sunrise: sunrise,
@@ -79,20 +79,26 @@ mixin _$DailyWeatherDto {
   int? get sunset => throw _privateConstructorUsedError;
   int? get moonrise => throw _privateConstructorUsedError;
   int? get moonset => throw _privateConstructorUsedError;
+  @JsonKey(name: 'moon_phase')
   double? get moonPhase => throw _privateConstructorUsedError;
   TempDto? get temp => throw _privateConstructorUsedError;
+  @JsonKey(name: 'feels_like')
   FeelsLikeDto? get feelsLike => throw _privateConstructorUsedError;
   int? get pressure => throw _privateConstructorUsedError;
   int? get humidity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dew_point')
   double? get dewPoint => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_speed')
   double? get windSpeed => throw _privateConstructorUsedError;
-  int? get windDeg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_deg')
+  double? get windDeg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_gust')
   double? get windGust => throw _privateConstructorUsedError;
   List<WeatherTagDto>? get weather => throw _privateConstructorUsedError;
   int? get clouds => throw _privateConstructorUsedError;
   double? get pop => throw _privateConstructorUsedError;
   double? get uvi => throw _privateConstructorUsedError;
-  double? get rain => throw _privateConstructorUsedError;
+  RainDto? get rain => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -111,23 +117,24 @@ abstract class $DailyWeatherDtoCopyWith<$Res> {
       int? sunset,
       int? moonrise,
       int? moonset,
-      double? moonPhase,
+      @JsonKey(name: 'moon_phase') double? moonPhase,
       TempDto? temp,
-      FeelsLikeDto? feelsLike,
+      @JsonKey(name: 'feels_like') FeelsLikeDto? feelsLike,
       int? pressure,
       int? humidity,
-      double? dewPoint,
-      double? windSpeed,
-      int? windDeg,
-      double? windGust,
+      @JsonKey(name: 'dew_point') double? dewPoint,
+      @JsonKey(name: 'wind_speed') double? windSpeed,
+      @JsonKey(name: 'wind_deg') double? windDeg,
+      @JsonKey(name: 'wind_gust') double? windGust,
       List<WeatherTagDto>? weather,
       int? clouds,
       double? pop,
       double? uvi,
-      double? rain});
+      RainDto? rain});
 
   $TempDtoCopyWith<$Res>? get temp;
   $FeelsLikeDtoCopyWith<$Res>? get feelsLike;
+  $RainDtoCopyWith<$Res>? get rain;
 }
 
 /// @nodoc
@@ -213,7 +220,7 @@ class _$DailyWeatherDtoCopyWithImpl<$Res>
       windDeg: windDeg == freezed
           ? _value.windDeg
           : windDeg // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       windGust: windGust == freezed
           ? _value.windGust
           : windGust // ignore: cast_nullable_to_non_nullable
@@ -237,7 +244,7 @@ class _$DailyWeatherDtoCopyWithImpl<$Res>
       rain: rain == freezed
           ? _value.rain
           : rain // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as RainDto?,
     ));
   }
 
@@ -262,6 +269,17 @@ class _$DailyWeatherDtoCopyWithImpl<$Res>
       return _then(_value.copyWith(feelsLike: value));
     });
   }
+
+  @override
+  $RainDtoCopyWith<$Res>? get rain {
+    if (_value.rain == null) {
+      return null;
+    }
+
+    return $RainDtoCopyWith<$Res>(_value.rain!, (value) {
+      return _then(_value.copyWith(rain: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -277,25 +295,27 @@ abstract class _$DailyWeatherCopyWith<$Res>
       int? sunset,
       int? moonrise,
       int? moonset,
-      double? moonPhase,
+      @JsonKey(name: 'moon_phase') double? moonPhase,
       TempDto? temp,
-      FeelsLikeDto? feelsLike,
+      @JsonKey(name: 'feels_like') FeelsLikeDto? feelsLike,
       int? pressure,
       int? humidity,
-      double? dewPoint,
-      double? windSpeed,
-      int? windDeg,
-      double? windGust,
+      @JsonKey(name: 'dew_point') double? dewPoint,
+      @JsonKey(name: 'wind_speed') double? windSpeed,
+      @JsonKey(name: 'wind_deg') double? windDeg,
+      @JsonKey(name: 'wind_gust') double? windGust,
       List<WeatherTagDto>? weather,
       int? clouds,
       double? pop,
       double? uvi,
-      double? rain});
+      RainDto? rain});
 
   @override
   $TempDtoCopyWith<$Res>? get temp;
   @override
   $FeelsLikeDtoCopyWith<$Res>? get feelsLike;
+  @override
+  $RainDtoCopyWith<$Res>? get rain;
 }
 
 /// @nodoc
@@ -383,7 +403,7 @@ class __$DailyWeatherCopyWithImpl<$Res>
       windDeg: windDeg == freezed
           ? _value.windDeg
           : windDeg // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       windGust: windGust == freezed
           ? _value.windGust
           : windGust // ignore: cast_nullable_to_non_nullable
@@ -407,34 +427,35 @@ class __$DailyWeatherCopyWithImpl<$Res>
       rain: rain == freezed
           ? _value.rain
           : rain // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as RainDto?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_DailyWeather implements _DailyWeather {
+class _$_DailyWeather extends _DailyWeather {
   const _$_DailyWeather(
       {this.dt,
       this.sunrise,
       this.sunset,
       this.moonrise,
       this.moonset,
-      this.moonPhase,
+      @JsonKey(name: 'moon_phase') this.moonPhase,
       this.temp,
-      this.feelsLike,
+      @JsonKey(name: 'feels_like') this.feelsLike,
       this.pressure,
       this.humidity,
-      this.dewPoint,
-      this.windSpeed,
-      this.windDeg,
-      this.windGust,
+      @JsonKey(name: 'dew_point') this.dewPoint,
+      @JsonKey(name: 'wind_speed') this.windSpeed,
+      @JsonKey(name: 'wind_deg') this.windDeg,
+      @JsonKey(name: 'wind_gust') this.windGust,
       this.weather,
       this.clouds,
       this.pop,
       this.uvi,
-      this.rain});
+      this.rain})
+      : super._();
 
   factory _$_DailyWeather.fromJson(Map<String, dynamic> json) =>
       _$$_DailyWeatherFromJson(json);
@@ -450,22 +471,28 @@ class _$_DailyWeather implements _DailyWeather {
   @override
   final int? moonset;
   @override
+  @JsonKey(name: 'moon_phase')
   final double? moonPhase;
   @override
   final TempDto? temp;
   @override
+  @JsonKey(name: 'feels_like')
   final FeelsLikeDto? feelsLike;
   @override
   final int? pressure;
   @override
   final int? humidity;
   @override
+  @JsonKey(name: 'dew_point')
   final double? dewPoint;
   @override
+  @JsonKey(name: 'wind_speed')
   final double? windSpeed;
   @override
-  final int? windDeg;
+  @JsonKey(name: 'wind_deg')
+  final double? windDeg;
   @override
+  @JsonKey(name: 'wind_gust')
   final double? windGust;
   @override
   final List<WeatherTagDto>? weather;
@@ -476,7 +503,7 @@ class _$_DailyWeather implements _DailyWeather {
   @override
   final double? uvi;
   @override
-  final double? rain;
+  final RainDto? rain;
 
   @override
   String toString() {
@@ -573,27 +600,28 @@ class _$_DailyWeather implements _DailyWeather {
   }
 }
 
-abstract class _DailyWeather implements DailyWeatherDto {
+abstract class _DailyWeather extends DailyWeatherDto {
   const factory _DailyWeather(
       {int? dt,
       int? sunrise,
       int? sunset,
       int? moonrise,
       int? moonset,
-      double? moonPhase,
+      @JsonKey(name: 'moon_phase') double? moonPhase,
       TempDto? temp,
-      FeelsLikeDto? feelsLike,
+      @JsonKey(name: 'feels_like') FeelsLikeDto? feelsLike,
       int? pressure,
       int? humidity,
-      double? dewPoint,
-      double? windSpeed,
-      int? windDeg,
-      double? windGust,
+      @JsonKey(name: 'dew_point') double? dewPoint,
+      @JsonKey(name: 'wind_speed') double? windSpeed,
+      @JsonKey(name: 'wind_deg') double? windDeg,
+      @JsonKey(name: 'wind_gust') double? windGust,
       List<WeatherTagDto>? weather,
       int? clouds,
       double? pop,
       double? uvi,
-      double? rain}) = _$_DailyWeather;
+      RainDto? rain}) = _$_DailyWeather;
+  const _DailyWeather._() : super._();
 
   factory _DailyWeather.fromJson(Map<String, dynamic> json) =
       _$_DailyWeather.fromJson;
@@ -609,22 +637,28 @@ abstract class _DailyWeather implements DailyWeatherDto {
   @override
   int? get moonset => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'moon_phase')
   double? get moonPhase => throw _privateConstructorUsedError;
   @override
   TempDto? get temp => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'feels_like')
   FeelsLikeDto? get feelsLike => throw _privateConstructorUsedError;
   @override
   int? get pressure => throw _privateConstructorUsedError;
   @override
   int? get humidity => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'dew_point')
   double? get dewPoint => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'wind_speed')
   double? get windSpeed => throw _privateConstructorUsedError;
   @override
-  int? get windDeg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_deg')
+  double? get windDeg => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'wind_gust')
   double? get windGust => throw _privateConstructorUsedError;
   @override
   List<WeatherTagDto>? get weather => throw _privateConstructorUsedError;
@@ -635,10 +669,133 @@ abstract class _DailyWeather implements DailyWeatherDto {
   @override
   double? get uvi => throw _privateConstructorUsedError;
   @override
-  double? get rain => throw _privateConstructorUsedError;
+  RainDto? get rain => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DailyWeatherCopyWith<_DailyWeather> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+class _$RainDtoTearOff {
+  const _$RainDtoTearOff();
+
+  _RainDto call({required Map<String, double> dtRain}) {
+    return _RainDto(
+      dtRain: dtRain,
+    );
+  }
+}
+
+/// @nodoc
+const $RainDto = _$RainDtoTearOff();
+
+/// @nodoc
+mixin _$RainDto {
+  Map<String, double> get dtRain => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $RainDtoCopyWith<RainDto> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RainDtoCopyWith<$Res> {
+  factory $RainDtoCopyWith(RainDto value, $Res Function(RainDto) then) =
+      _$RainDtoCopyWithImpl<$Res>;
+  $Res call({Map<String, double> dtRain});
+}
+
+/// @nodoc
+class _$RainDtoCopyWithImpl<$Res> implements $RainDtoCopyWith<$Res> {
+  _$RainDtoCopyWithImpl(this._value, this._then);
+
+  final RainDto _value;
+  // ignore: unused_field
+  final $Res Function(RainDto) _then;
+
+  @override
+  $Res call({
+    Object? dtRain = freezed,
+  }) {
+    return _then(_value.copyWith(
+      dtRain: dtRain == freezed
+          ? _value.dtRain
+          : dtRain // ignore: cast_nullable_to_non_nullable
+              as Map<String, double>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$RainDtoCopyWith<$Res> implements $RainDtoCopyWith<$Res> {
+  factory _$RainDtoCopyWith(_RainDto value, $Res Function(_RainDto) then) =
+      __$RainDtoCopyWithImpl<$Res>;
+  @override
+  $Res call({Map<String, double> dtRain});
+}
+
+/// @nodoc
+class __$RainDtoCopyWithImpl<$Res> extends _$RainDtoCopyWithImpl<$Res>
+    implements _$RainDtoCopyWith<$Res> {
+  __$RainDtoCopyWithImpl(_RainDto _value, $Res Function(_RainDto) _then)
+      : super(_value, (v) => _then(v as _RainDto));
+
+  @override
+  _RainDto get _value => super._value as _RainDto;
+
+  @override
+  $Res call({
+    Object? dtRain = freezed,
+  }) {
+    return _then(_RainDto(
+      dtRain: dtRain == freezed
+          ? _value.dtRain
+          : dtRain // ignore: cast_nullable_to_non_nullable
+              as Map<String, double>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_RainDto extends _RainDto {
+  const _$_RainDto({required this.dtRain}) : super._();
+
+  @override
+  final Map<String, double> dtRain;
+
+  @override
+  String toString() {
+    return 'RainDto(dtRain: $dtRain)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _RainDto &&
+            (identical(other.dtRain, dtRain) ||
+                const DeepCollectionEquality().equals(other.dtRain, dtRain)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(dtRain);
+
+  @JsonKey(ignore: true)
+  @override
+  _$RainDtoCopyWith<_RainDto> get copyWith =>
+      __$RainDtoCopyWithImpl<_RainDto>(this, _$identity);
+}
+
+abstract class _RainDto extends RainDto {
+  const factory _RainDto({required Map<String, double> dtRain}) = _$_RainDto;
+  const _RainDto._() : super._();
+
+  @override
+  Map<String, double> get dtRain => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$RainDtoCopyWith<_RainDto> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

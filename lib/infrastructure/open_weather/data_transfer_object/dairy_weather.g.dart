@@ -13,26 +13,26 @@ _$_DailyWeather _$$_DailyWeatherFromJson(Map<String, dynamic> json) =>
       sunset: json['sunset'] as int?,
       moonrise: json['moonrise'] as int?,
       moonset: json['moonset'] as int?,
-      moonPhase: (json['moonPhase'] as num?)?.toDouble(),
+      moonPhase: (json['moon_phase'] as num?)?.toDouble(),
       temp: json['temp'] == null
           ? null
           : TempDto.fromJson(json['temp'] as Map<String, dynamic>),
-      feelsLike: json['feelsLike'] == null
+      feelsLike: json['feels_like'] == null
           ? null
-          : FeelsLikeDto.fromJson(json['feelsLike'] as Map<String, dynamic>),
+          : FeelsLikeDto.fromJson(json['feels_like'] as Map<String, dynamic>),
       pressure: json['pressure'] as int?,
       humidity: json['humidity'] as int?,
-      dewPoint: (json['dewPoint'] as num?)?.toDouble(),
-      windSpeed: (json['windSpeed'] as num?)?.toDouble(),
-      windDeg: json['windDeg'] as int?,
-      windGust: (json['windGust'] as num?)?.toDouble(),
+      dewPoint: (json['dew_point'] as num?)?.toDouble(),
+      windSpeed: (json['wind_speed'] as num?)?.toDouble(),
+      windDeg: (json['wind_deg'] as num?)?.toDouble(),
+      windGust: (json['wind_gust'] as num?)?.toDouble(),
       weather: (json['weather'] as List<dynamic>?)
           ?.map((e) => WeatherTagDto.fromJson(e as Map<String, dynamic>))
           .toList(),
       clouds: json['clouds'] as int?,
       pop: (json['pop'] as num?)?.toDouble(),
       uvi: (json['uvi'] as num?)?.toDouble(),
-      rain: (json['rain'] as num?)?.toDouble(),
+      rain: json['rain'] == null ? null : RainDto.fromJson(json['rain']),
     );
 
 Map<String, dynamic> _$$_DailyWeatherToJson(_$_DailyWeather instance) =>
@@ -42,20 +42,20 @@ Map<String, dynamic> _$$_DailyWeatherToJson(_$_DailyWeather instance) =>
       'sunset': instance.sunset,
       'moonrise': instance.moonrise,
       'moonset': instance.moonset,
-      'moonPhase': instance.moonPhase,
+      'moon_phase': instance.moonPhase,
       'temp': instance.temp?.toJson(),
-      'feelsLike': instance.feelsLike?.toJson(),
+      'feels_like': instance.feelsLike?.toJson(),
       'pressure': instance.pressure,
       'humidity': instance.humidity,
-      'dewPoint': instance.dewPoint,
-      'windSpeed': instance.windSpeed,
-      'windDeg': instance.windDeg,
-      'windGust': instance.windGust,
+      'dew_point': instance.dewPoint,
+      'wind_speed': instance.windSpeed,
+      'wind_deg': instance.windDeg,
+      'wind_gust': instance.windGust,
       'weather': instance.weather?.map((e) => e.toJson()).toList(),
       'clouds': instance.clouds,
       'pop': instance.pop,
       'uvi': instance.uvi,
-      'rain': instance.rain,
+      'rain': instance.rain?.toJson(),
     };
 
 _$_FeelsLike _$$_FeelsLikeFromJson(Map<String, dynamic> json) => _$_FeelsLike(

@@ -26,7 +26,7 @@ class _$WeatherTearOff {
       required DateTime timeOfCall,
       @DoubleOptionConverter() required Option<double> temperature,
       @DoubleOptionConverter() required Option<double> humidity,
-      @DoubleOptionConverter() required Option<double> presure,
+      @DoubleOptionConverter() required Option<double> pressure,
       @DoubleOptionConverter() required Option<double> windSpeed,
       @DateTimeOptionConverter() required Option<DateTime> sunrise,
       @DateTimeOptionConverter() required Option<DateTime> sunset,
@@ -37,7 +37,7 @@ class _$WeatherTearOff {
       timeOfCall: timeOfCall,
       temperature: temperature,
       humidity: humidity,
-      presure: presure,
+      pressure: pressure,
       windSpeed: windSpeed,
       sunrise: sunrise,
       sunset: sunset,
@@ -63,7 +63,7 @@ mixin _$Weather {
   @DoubleOptionConverter()
   Option<double> get humidity => throw _privateConstructorUsedError;
   @DoubleOptionConverter()
-  Option<double> get presure => throw _privateConstructorUsedError;
+  Option<double> get pressure => throw _privateConstructorUsedError;
   @DoubleOptionConverter()
   Option<double> get windSpeed => throw _privateConstructorUsedError;
   @DateTimeOptionConverter()
@@ -88,7 +88,7 @@ abstract class $WeatherCopyWith<$Res> {
       DateTime timeOfCall,
       @DoubleOptionConverter() Option<double> temperature,
       @DoubleOptionConverter() Option<double> humidity,
-      @DoubleOptionConverter() Option<double> presure,
+      @DoubleOptionConverter() Option<double> pressure,
       @DoubleOptionConverter() Option<double> windSpeed,
       @DateTimeOptionConverter() Option<DateTime> sunrise,
       @DateTimeOptionConverter() Option<DateTime> sunset,
@@ -112,7 +112,7 @@ class _$WeatherCopyWithImpl<$Res> implements $WeatherCopyWith<$Res> {
     Object? timeOfCall = freezed,
     Object? temperature = freezed,
     Object? humidity = freezed,
-    Object? presure = freezed,
+    Object? pressure = freezed,
     Object? windSpeed = freezed,
     Object? sunrise = freezed,
     Object? sunset = freezed,
@@ -136,9 +136,9 @@ class _$WeatherCopyWithImpl<$Res> implements $WeatherCopyWith<$Res> {
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
               as Option<double>,
-      presure: presure == freezed
-          ? _value.presure
-          : presure // ignore: cast_nullable_to_non_nullable
+      pressure: pressure == freezed
+          ? _value.pressure
+          : pressure // ignore: cast_nullable_to_non_nullable
               as Option<double>,
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
@@ -181,7 +181,7 @@ abstract class _$WeatherCopyWith<$Res> implements $WeatherCopyWith<$Res> {
       DateTime timeOfCall,
       @DoubleOptionConverter() Option<double> temperature,
       @DoubleOptionConverter() Option<double> humidity,
-      @DoubleOptionConverter() Option<double> presure,
+      @DoubleOptionConverter() Option<double> pressure,
       @DoubleOptionConverter() Option<double> windSpeed,
       @DateTimeOptionConverter() Option<DateTime> sunrise,
       @DateTimeOptionConverter() Option<DateTime> sunset,
@@ -207,7 +207,7 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
     Object? timeOfCall = freezed,
     Object? temperature = freezed,
     Object? humidity = freezed,
-    Object? presure = freezed,
+    Object? pressure = freezed,
     Object? windSpeed = freezed,
     Object? sunrise = freezed,
     Object? sunset = freezed,
@@ -231,9 +231,9 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
               as Option<double>,
-      presure: presure == freezed
-          ? _value.presure
-          : presure // ignore: cast_nullable_to_non_nullable
+      pressure: pressure == freezed
+          ? _value.pressure
+          : pressure // ignore: cast_nullable_to_non_nullable
               as Option<double>,
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
@@ -267,7 +267,7 @@ class _$_Weather implements _Weather {
       required this.timeOfCall,
       @DoubleOptionConverter() required this.temperature,
       @DoubleOptionConverter() required this.humidity,
-      @DoubleOptionConverter() required this.presure,
+      @DoubleOptionConverter() required this.pressure,
       @DoubleOptionConverter() required this.windSpeed,
       @DateTimeOptionConverter() required this.sunrise,
       @DateTimeOptionConverter() required this.sunset,
@@ -289,7 +289,7 @@ class _$_Weather implements _Weather {
   final Option<double> humidity;
   @override
   @DoubleOptionConverter()
-  final Option<double> presure;
+  final Option<double> pressure;
   @override
   @DoubleOptionConverter()
   final Option<double> windSpeed;
@@ -306,7 +306,7 @@ class _$_Weather implements _Weather {
 
   @override
   String toString() {
-    return 'Weather(locationInfo: $locationInfo, timeOfCall: $timeOfCall, temperature: $temperature, humidity: $humidity, presure: $presure, windSpeed: $windSpeed, sunrise: $sunrise, sunset: $sunset, conditions: $conditions, dailyWeather: $dailyWeather)';
+    return 'Weather(locationInfo: $locationInfo, timeOfCall: $timeOfCall, temperature: $temperature, humidity: $humidity, pressure: $pressure, windSpeed: $windSpeed, sunrise: $sunrise, sunset: $sunset, conditions: $conditions, dailyWeather: $dailyWeather)';
   }
 
   @override
@@ -325,9 +325,9 @@ class _$_Weather implements _Weather {
             (identical(other.humidity, humidity) ||
                 const DeepCollectionEquality()
                     .equals(other.humidity, humidity)) &&
-            (identical(other.presure, presure) ||
+            (identical(other.pressure, pressure) ||
                 const DeepCollectionEquality()
-                    .equals(other.presure, presure)) &&
+                    .equals(other.pressure, pressure)) &&
             (identical(other.windSpeed, windSpeed) ||
                 const DeepCollectionEquality()
                     .equals(other.windSpeed, windSpeed)) &&
@@ -351,7 +351,7 @@ class _$_Weather implements _Weather {
       const DeepCollectionEquality().hash(timeOfCall) ^
       const DeepCollectionEquality().hash(temperature) ^
       const DeepCollectionEquality().hash(humidity) ^
-      const DeepCollectionEquality().hash(presure) ^
+      const DeepCollectionEquality().hash(pressure) ^
       const DeepCollectionEquality().hash(windSpeed) ^
       const DeepCollectionEquality().hash(sunrise) ^
       const DeepCollectionEquality().hash(sunset) ^
@@ -375,7 +375,7 @@ abstract class _Weather implements Weather {
       required DateTime timeOfCall,
       @DoubleOptionConverter() required Option<double> temperature,
       @DoubleOptionConverter() required Option<double> humidity,
-      @DoubleOptionConverter() required Option<double> presure,
+      @DoubleOptionConverter() required Option<double> pressure,
       @DoubleOptionConverter() required Option<double> windSpeed,
       @DateTimeOptionConverter() required Option<DateTime> sunrise,
       @DateTimeOptionConverter() required Option<DateTime> sunset,
@@ -396,7 +396,7 @@ abstract class _Weather implements Weather {
   Option<double> get humidity => throw _privateConstructorUsedError;
   @override
   @DoubleOptionConverter()
-  Option<double> get presure => throw _privateConstructorUsedError;
+  Option<double> get pressure => throw _privateConstructorUsedError;
   @override
   @DoubleOptionConverter()
   Option<double> get windSpeed => throw _privateConstructorUsedError;

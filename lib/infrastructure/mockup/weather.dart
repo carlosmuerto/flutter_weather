@@ -18,7 +18,7 @@ class MockupIWeatherFacade implements IWeatherFacade {
   MockupIWeatherFacade();
 
   @override
-  Future<Either<WeatherFailure, Weather>> read(
+  Future<Either<WeatherFailure, Weather>> fechNewWeather(
           double lat, double lng, String lang) async =>
       mockupCase.when(
         noErrors: () async => right(
@@ -32,7 +32,7 @@ class MockupIWeatherFacade implements IWeatherFacade {
             timeOfCall: DateTime.now(),
             temperature: optionOf(23.0),
             humidity: optionOf(50.0),
-            presure: optionOf(5.0),
+            pressure: optionOf(5.0),
             windSpeed: optionOf(50.0),
             sunrise: optionOf(DateTime.now()),
             sunset: optionOf(DateTime.now()),
@@ -66,17 +66,17 @@ Map<DateTime, DailyWeather> _genDailyWeather(DateTime today) {
   for (var dayPluss = 0; dayPluss < 5; dayPluss++) {
     entries[today.add(Duration(days: dayPluss))] = DailyWeather(
       minTemp: optionOf(19.0 + rnd.nextIntRanged(-1, 4)),
-      nigthTemp: optionOf(21.0 + rnd.nextIntRanged(-1, 1)),
+      nightTemp: optionOf(21.0 + rnd.nextIntRanged(-1, 1)),
       dayTemp: optionOf(23.0 + rnd.nextIntRanged(-1, 1)),
       maxTemp: optionOf(25.0 + rnd.nextIntRanged(-2, 5)),
-      conditions: optionOf(
+      conditions: [
         Condition(
           id: optionOf(1),
           main: optionOf("main"),
           description: optionOf("description"),
           icon: optionOf("icon"),
         ),
-      ),
+      ],
     );
   }
   return entries;

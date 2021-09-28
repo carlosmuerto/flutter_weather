@@ -9,6 +9,11 @@ class WeatherFailure with _$WeatherFailure {
   const factory WeatherFailure.notConected() = _NotConected;
   const factory WeatherFailure.locationFailure(LocationInfoFailure failure) =
       _LocationFailure;
+
+  const factory WeatherFailure.noApiKey() = _NoApiKey;
+  const factory WeatherFailure.notHandledException({required Object e}) =
+      _NotHandledException;
+
   factory WeatherFailure.fromJson(Map<String, dynamic> json) =>
       _$WeatherFailureFromJson(json);
 }

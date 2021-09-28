@@ -19,6 +19,10 @@ WeatherFailure _$WeatherFailureFromJson(Map<String, dynamic> json) {
       return _NotConected.fromJson(json);
     case 'locationFailure':
       return _LocationFailure.fromJson(json);
+    case 'noApiKey':
+      return _NoApiKey.fromJson(json);
+    case 'notHandledException':
+      return _NotHandledException.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'WeatherFailure',
@@ -40,6 +44,16 @@ class _$WeatherFailureTearOff {
     );
   }
 
+  _NoApiKey noApiKey() {
+    return const _NoApiKey();
+  }
+
+  _NotHandledException notHandledException({required Object e}) {
+    return _NotHandledException(
+      e: e,
+    );
+  }
+
   WeatherFailure fromJson(Map<String, Object> json) {
     return WeatherFailure.fromJson(json);
   }
@@ -54,18 +68,24 @@ mixin _$WeatherFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() notConected,
     required TResult Function(LocationInfoFailure failure) locationFailure,
+    required TResult Function() noApiKey,
+    required TResult Function(Object e) notHandledException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? notConected,
     TResult Function(LocationInfoFailure failure)? locationFailure,
+    TResult Function()? noApiKey,
+    TResult Function(Object e)? notHandledException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? notConected,
     TResult Function(LocationInfoFailure failure)? locationFailure,
+    TResult Function()? noApiKey,
+    TResult Function(Object e)? notHandledException,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -73,18 +93,24 @@ mixin _$WeatherFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_NotConected value) notConected,
     required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_NoApiKey value) noApiKey,
+    required TResult Function(_NotHandledException value) notHandledException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_NotConected value)? notConected,
     TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_NoApiKey value)? noApiKey,
+    TResult Function(_NotHandledException value)? notHandledException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NotConected value)? notConected,
     TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_NoApiKey value)? noApiKey,
+    TResult Function(_NotHandledException value)? notHandledException,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -153,6 +179,8 @@ class _$_NotConected implements _NotConected {
   TResult when<TResult extends Object?>({
     required TResult Function() notConected,
     required TResult Function(LocationInfoFailure failure) locationFailure,
+    required TResult Function() noApiKey,
+    required TResult Function(Object e) notHandledException,
   }) {
     return notConected();
   }
@@ -162,6 +190,8 @@ class _$_NotConected implements _NotConected {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? notConected,
     TResult Function(LocationInfoFailure failure)? locationFailure,
+    TResult Function()? noApiKey,
+    TResult Function(Object e)? notHandledException,
   }) {
     return notConected?.call();
   }
@@ -171,6 +201,8 @@ class _$_NotConected implements _NotConected {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? notConected,
     TResult Function(LocationInfoFailure failure)? locationFailure,
+    TResult Function()? noApiKey,
+    TResult Function(Object e)? notHandledException,
     required TResult orElse(),
   }) {
     if (notConected != null) {
@@ -184,6 +216,8 @@ class _$_NotConected implements _NotConected {
   TResult map<TResult extends Object?>({
     required TResult Function(_NotConected value) notConected,
     required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_NoApiKey value) noApiKey,
+    required TResult Function(_NotHandledException value) notHandledException,
   }) {
     return notConected(this);
   }
@@ -193,6 +227,8 @@ class _$_NotConected implements _NotConected {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_NotConected value)? notConected,
     TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_NoApiKey value)? noApiKey,
+    TResult Function(_NotHandledException value)? notHandledException,
   }) {
     return notConected?.call(this);
   }
@@ -202,6 +238,8 @@ class _$_NotConected implements _NotConected {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NotConected value)? notConected,
     TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_NoApiKey value)? noApiKey,
+    TResult Function(_NotHandledException value)? notHandledException,
     required TResult orElse(),
   }) {
     if (notConected != null) {
@@ -302,6 +340,8 @@ class _$_LocationFailure implements _LocationFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() notConected,
     required TResult Function(LocationInfoFailure failure) locationFailure,
+    required TResult Function() noApiKey,
+    required TResult Function(Object e) notHandledException,
   }) {
     return locationFailure(failure);
   }
@@ -311,6 +351,8 @@ class _$_LocationFailure implements _LocationFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? notConected,
     TResult Function(LocationInfoFailure failure)? locationFailure,
+    TResult Function()? noApiKey,
+    TResult Function(Object e)? notHandledException,
   }) {
     return locationFailure?.call(failure);
   }
@@ -320,6 +362,8 @@ class _$_LocationFailure implements _LocationFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? notConected,
     TResult Function(LocationInfoFailure failure)? locationFailure,
+    TResult Function()? noApiKey,
+    TResult Function(Object e)? notHandledException,
     required TResult orElse(),
   }) {
     if (locationFailure != null) {
@@ -333,6 +377,8 @@ class _$_LocationFailure implements _LocationFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_NotConected value) notConected,
     required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_NoApiKey value) noApiKey,
+    required TResult Function(_NotHandledException value) notHandledException,
   }) {
     return locationFailure(this);
   }
@@ -342,6 +388,8 @@ class _$_LocationFailure implements _LocationFailure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_NotConected value)? notConected,
     TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_NoApiKey value)? noApiKey,
+    TResult Function(_NotHandledException value)? notHandledException,
   }) {
     return locationFailure?.call(this);
   }
@@ -351,6 +399,8 @@ class _$_LocationFailure implements _LocationFailure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NotConected value)? notConected,
     TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_NoApiKey value)? noApiKey,
+    TResult Function(_NotHandledException value)? notHandledException,
     required TResult orElse(),
   }) {
     if (locationFailure != null) {
@@ -375,5 +425,288 @@ abstract class _LocationFailure implements WeatherFailure {
   LocationInfoFailure get failure => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$LocationFailureCopyWith<_LocationFailure> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$NoApiKeyCopyWith<$Res> {
+  factory _$NoApiKeyCopyWith(_NoApiKey value, $Res Function(_NoApiKey) then) =
+      __$NoApiKeyCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$NoApiKeyCopyWithImpl<$Res> extends _$WeatherFailureCopyWithImpl<$Res>
+    implements _$NoApiKeyCopyWith<$Res> {
+  __$NoApiKeyCopyWithImpl(_NoApiKey _value, $Res Function(_NoApiKey) _then)
+      : super(_value, (v) => _then(v as _NoApiKey));
+
+  @override
+  _NoApiKey get _value => super._value as _NoApiKey;
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_NoApiKey implements _NoApiKey {
+  const _$_NoApiKey();
+
+  factory _$_NoApiKey.fromJson(Map<String, dynamic> json) =>
+      _$$_NoApiKeyFromJson(json);
+
+  @override
+  String toString() {
+    return 'WeatherFailure.noApiKey()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _NoApiKey);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() notConected,
+    required TResult Function(LocationInfoFailure failure) locationFailure,
+    required TResult Function() noApiKey,
+    required TResult Function(Object e) notHandledException,
+  }) {
+    return noApiKey();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? notConected,
+    TResult Function(LocationInfoFailure failure)? locationFailure,
+    TResult Function()? noApiKey,
+    TResult Function(Object e)? notHandledException,
+  }) {
+    return noApiKey?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? notConected,
+    TResult Function(LocationInfoFailure failure)? locationFailure,
+    TResult Function()? noApiKey,
+    TResult Function(Object e)? notHandledException,
+    required TResult orElse(),
+  }) {
+    if (noApiKey != null) {
+      return noApiKey();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NotConected value) notConected,
+    required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_NoApiKey value) noApiKey,
+    required TResult Function(_NotHandledException value) notHandledException,
+  }) {
+    return noApiKey(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NotConected value)? notConected,
+    TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_NoApiKey value)? noApiKey,
+    TResult Function(_NotHandledException value)? notHandledException,
+  }) {
+    return noApiKey?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NotConected value)? notConected,
+    TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_NoApiKey value)? noApiKey,
+    TResult Function(_NotHandledException value)? notHandledException,
+    required TResult orElse(),
+  }) {
+    if (noApiKey != null) {
+      return noApiKey(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_NoApiKeyToJson(this)..['runtimeType'] = 'noApiKey';
+  }
+}
+
+abstract class _NoApiKey implements WeatherFailure {
+  const factory _NoApiKey() = _$_NoApiKey;
+
+  factory _NoApiKey.fromJson(Map<String, dynamic> json) = _$_NoApiKey.fromJson;
+}
+
+/// @nodoc
+abstract class _$NotHandledExceptionCopyWith<$Res> {
+  factory _$NotHandledExceptionCopyWith(_NotHandledException value,
+          $Res Function(_NotHandledException) then) =
+      __$NotHandledExceptionCopyWithImpl<$Res>;
+  $Res call({Object e});
+}
+
+/// @nodoc
+class __$NotHandledExceptionCopyWithImpl<$Res>
+    extends _$WeatherFailureCopyWithImpl<$Res>
+    implements _$NotHandledExceptionCopyWith<$Res> {
+  __$NotHandledExceptionCopyWithImpl(
+      _NotHandledException _value, $Res Function(_NotHandledException) _then)
+      : super(_value, (v) => _then(v as _NotHandledException));
+
+  @override
+  _NotHandledException get _value => super._value as _NotHandledException;
+
+  @override
+  $Res call({
+    Object? e = freezed,
+  }) {
+    return _then(_NotHandledException(
+      e: e == freezed
+          ? _value.e
+          : e // ignore: cast_nullable_to_non_nullable
+              as Object,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_NotHandledException implements _NotHandledException {
+  const _$_NotHandledException({required this.e});
+
+  factory _$_NotHandledException.fromJson(Map<String, dynamic> json) =>
+      _$$_NotHandledExceptionFromJson(json);
+
+  @override
+  final Object e;
+
+  @override
+  String toString() {
+    return 'WeatherFailure.notHandledException(e: $e)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _NotHandledException &&
+            (identical(other.e, e) ||
+                const DeepCollectionEquality().equals(other.e, e)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(e);
+
+  @JsonKey(ignore: true)
+  @override
+  _$NotHandledExceptionCopyWith<_NotHandledException> get copyWith =>
+      __$NotHandledExceptionCopyWithImpl<_NotHandledException>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() notConected,
+    required TResult Function(LocationInfoFailure failure) locationFailure,
+    required TResult Function() noApiKey,
+    required TResult Function(Object e) notHandledException,
+  }) {
+    return notHandledException(e);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? notConected,
+    TResult Function(LocationInfoFailure failure)? locationFailure,
+    TResult Function()? noApiKey,
+    TResult Function(Object e)? notHandledException,
+  }) {
+    return notHandledException?.call(e);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? notConected,
+    TResult Function(LocationInfoFailure failure)? locationFailure,
+    TResult Function()? noApiKey,
+    TResult Function(Object e)? notHandledException,
+    required TResult orElse(),
+  }) {
+    if (notHandledException != null) {
+      return notHandledException(e);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NotConected value) notConected,
+    required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_NoApiKey value) noApiKey,
+    required TResult Function(_NotHandledException value) notHandledException,
+  }) {
+    return notHandledException(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NotConected value)? notConected,
+    TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_NoApiKey value)? noApiKey,
+    TResult Function(_NotHandledException value)? notHandledException,
+  }) {
+    return notHandledException?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NotConected value)? notConected,
+    TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_NoApiKey value)? noApiKey,
+    TResult Function(_NotHandledException value)? notHandledException,
+    required TResult orElse(),
+  }) {
+    if (notHandledException != null) {
+      return notHandledException(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_NotHandledExceptionToJson(this)
+      ..['runtimeType'] = 'notHandledException';
+  }
+}
+
+abstract class _NotHandledException implements WeatherFailure {
+  const factory _NotHandledException({required Object e}) =
+      _$_NotHandledException;
+
+  factory _NotHandledException.fromJson(Map<String, dynamic> json) =
+      _$_NotHandledException.fromJson;
+
+  Object get e => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$NotHandledExceptionCopyWith<_NotHandledException> get copyWith =>
       throw _privateConstructorUsedError;
 }

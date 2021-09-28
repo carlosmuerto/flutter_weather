@@ -1,5 +1,6 @@
 {
 	"@@locale": "en",
+	"ActualLang": "en",
 	"title": "Wheather",
 	"temperature": "Temperature",
 	"humidity": "Humidity",

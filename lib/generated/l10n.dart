@@ -50,6 +50,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `en`
+  String get ActualLang {
+    return Intl.message(
+      'en',
+      name: 'ActualLang',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Wheather`
   String get title {
     return Intl.message(

@@ -14,8 +14,8 @@ _$_Weather _$$_WeatherFromJson(Map<String, dynamic> json) => _$_Weather(
           .fromJson(json['temperature'] as Map<String, dynamic>),
       humidity: const DoubleOptionConverter()
           .fromJson(json['humidity'] as Map<String, dynamic>),
-      presure: const DoubleOptionConverter()
-          .fromJson(json['presure'] as Map<String, dynamic>),
+      pressure: const DoubleOptionConverter()
+          .fromJson(json['pressure'] as Map<String, dynamic>),
       windSpeed: const DoubleOptionConverter()
           .fromJson(json['windSpeed'] as Map<String, dynamic>),
       sunrise: const DateTimeOptionConverter()
@@ -37,7 +37,7 @@ Map<String, dynamic> _$$_WeatherToJson(_$_Weather instance) =>
       'timeOfCall': instance.timeOfCall.toIso8601String(),
       'temperature': const DoubleOptionConverter().toJson(instance.temperature),
       'humidity': const DoubleOptionConverter().toJson(instance.humidity),
-      'presure': const DoubleOptionConverter().toJson(instance.presure),
+      'pressure': const DoubleOptionConverter().toJson(instance.pressure),
       'windSpeed': const DoubleOptionConverter().toJson(instance.windSpeed),
       'sunrise': const DateTimeOptionConverter().toJson(instance.sunrise),
       'sunset': const DateTimeOptionConverter().toJson(instance.sunset),

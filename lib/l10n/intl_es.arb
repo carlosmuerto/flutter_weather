@@ -1,5 +1,6 @@
 {
 	"@@locale": "es",
+	"ActualLang": "es",
 	"title": "Clima",
 	"temperature": "Temperatura",
 	"humidity": "Humedad",

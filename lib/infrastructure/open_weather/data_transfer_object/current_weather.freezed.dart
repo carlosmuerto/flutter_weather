@@ -2,7 +2,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'weather.dart';
+part of 'current_weather.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,29 +13,29 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-WeatherDto _$WeatherDtoFromJson(Map<String, dynamic> json) {
+CurrentWeatherDto _$CurrentWeatherDtoFromJson(Map<String, dynamic> json) {
   return _WeatherDto.fromJson(json);
 }
 
 /// @nodoc
-class _$WeatherDtoTearOff {
-  const _$WeatherDtoTearOff();
+class _$CurrentWeatherDtoTearOff {
+  const _$CurrentWeatherDtoTearOff();
 
   _WeatherDto call(
       {int? dt,
       int? sunrise,
       int? sunset,
       double? temp,
-      double? feelsLike,
-      int? pressure,
-      int? humidity,
-      double? dewPoint,
+      @JsonKey(name: 'feels_like') double? feelsLike,
+      double? pressure,
+      double? humidity,
       double? uvi,
-      int? clouds,
-      int? visibility,
-      double? windSpeed,
-      int? windDeg,
-      double? windGust,
+      double? clouds,
+      double? visibility,
+      @JsonKey(name: 'dew_point') double? dewPoint,
+      @JsonKey(name: 'wind_speed') double? windSpeed,
+      @JsonKey(name: 'wind_deg') double? windDeg,
+      @JsonKey(name: 'wind_gust') double? windGust,
       List<WeatherTagDto>? weather}) {
     return _WeatherDto(
       dt: dt,
@@ -45,10 +45,10 @@ class _$WeatherDtoTearOff {
       feelsLike: feelsLike,
       pressure: pressure,
       humidity: humidity,
-      dewPoint: dewPoint,
       uvi: uvi,
       clouds: clouds,
       visibility: visibility,
+      dewPoint: dewPoint,
       windSpeed: windSpeed,
       windDeg: windDeg,
       windGust: windGust,
@@ -56,68 +56,74 @@ class _$WeatherDtoTearOff {
     );
   }
 
-  WeatherDto fromJson(Map<String, Object> json) {
-    return WeatherDto.fromJson(json);
+  CurrentWeatherDto fromJson(Map<String, Object> json) {
+    return CurrentWeatherDto.fromJson(json);
   }
 }
 
 /// @nodoc
-const $WeatherDto = _$WeatherDtoTearOff();
+const $CurrentWeatherDto = _$CurrentWeatherDtoTearOff();
 
 /// @nodoc
-mixin _$WeatherDto {
+mixin _$CurrentWeatherDto {
   int? get dt => throw _privateConstructorUsedError;
   int? get sunrise => throw _privateConstructorUsedError;
   int? get sunset => throw _privateConstructorUsedError;
   double? get temp => throw _privateConstructorUsedError;
+  @JsonKey(name: 'feels_like')
   double? get feelsLike => throw _privateConstructorUsedError;
-  int? get pressure => throw _privateConstructorUsedError;
-  int? get humidity => throw _privateConstructorUsedError;
-  double? get dewPoint => throw _privateConstructorUsedError;
+  double? get pressure => throw _privateConstructorUsedError;
+  double? get humidity => throw _privateConstructorUsedError;
   double? get uvi => throw _privateConstructorUsedError;
-  int? get clouds => throw _privateConstructorUsedError;
-  int? get visibility => throw _privateConstructorUsedError;
+  double? get clouds => throw _privateConstructorUsedError;
+  double? get visibility => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dew_point')
+  double? get dewPoint => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_speed')
   double? get windSpeed => throw _privateConstructorUsedError;
-  int? get windDeg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_deg')
+  double? get windDeg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_gust')
   double? get windGust => throw _privateConstructorUsedError;
   List<WeatherTagDto>? get weather => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $WeatherDtoCopyWith<WeatherDto> get copyWith =>
+  $CurrentWeatherDtoCopyWith<CurrentWeatherDto> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $WeatherDtoCopyWith<$Res> {
-  factory $WeatherDtoCopyWith(
-          WeatherDto value, $Res Function(WeatherDto) then) =
-      _$WeatherDtoCopyWithImpl<$Res>;
+abstract class $CurrentWeatherDtoCopyWith<$Res> {
+  factory $CurrentWeatherDtoCopyWith(
+          CurrentWeatherDto value, $Res Function(CurrentWeatherDto) then) =
+      _$CurrentWeatherDtoCopyWithImpl<$Res>;
   $Res call(
       {int? dt,
       int? sunrise,
       int? sunset,
       double? temp,
-      double? feelsLike,
-      int? pressure,
-      int? humidity,
-      double? dewPoint,
+      @JsonKey(name: 'feels_like') double? feelsLike,
+      double? pressure,
+      double? humidity,
       double? uvi,
-      int? clouds,
-      int? visibility,
-      double? windSpeed,
-      int? windDeg,
-      double? windGust,
+      double? clouds,
+      double? visibility,
+      @JsonKey(name: 'dew_point') double? dewPoint,
+      @JsonKey(name: 'wind_speed') double? windSpeed,
+      @JsonKey(name: 'wind_deg') double? windDeg,
+      @JsonKey(name: 'wind_gust') double? windGust,
       List<WeatherTagDto>? weather});
 }
 
 /// @nodoc
-class _$WeatherDtoCopyWithImpl<$Res> implements $WeatherDtoCopyWith<$Res> {
-  _$WeatherDtoCopyWithImpl(this._value, this._then);
+class _$CurrentWeatherDtoCopyWithImpl<$Res>
+    implements $CurrentWeatherDtoCopyWith<$Res> {
+  _$CurrentWeatherDtoCopyWithImpl(this._value, this._then);
 
-  final WeatherDto _value;
+  final CurrentWeatherDto _value;
   // ignore: unused_field
-  final $Res Function(WeatherDto) _then;
+  final $Res Function(CurrentWeatherDto) _then;
 
   @override
   $Res call({
@@ -128,10 +134,10 @@ class _$WeatherDtoCopyWithImpl<$Res> implements $WeatherDtoCopyWith<$Res> {
     Object? feelsLike = freezed,
     Object? pressure = freezed,
     Object? humidity = freezed,
-    Object? dewPoint = freezed,
     Object? uvi = freezed,
     Object? clouds = freezed,
     Object? visibility = freezed,
+    Object? dewPoint = freezed,
     Object? windSpeed = freezed,
     Object? windDeg = freezed,
     Object? windGust = freezed,
@@ -161,14 +167,10 @@ class _$WeatherDtoCopyWithImpl<$Res> implements $WeatherDtoCopyWith<$Res> {
       pressure: pressure == freezed
           ? _value.pressure
           : pressure // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int?,
-      dewPoint: dewPoint == freezed
-          ? _value.dewPoint
-          : dewPoint // ignore: cast_nullable_to_non_nullable
               as double?,
       uvi: uvi == freezed
           ? _value.uvi
@@ -177,11 +179,15 @@ class _$WeatherDtoCopyWithImpl<$Res> implements $WeatherDtoCopyWith<$Res> {
       clouds: clouds == freezed
           ? _value.clouds
           : clouds // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       visibility: visibility == freezed
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
+      dewPoint: dewPoint == freezed
+          ? _value.dewPoint
+          : dewPoint // ignore: cast_nullable_to_non_nullable
+              as double?,
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
@@ -189,7 +195,7 @@ class _$WeatherDtoCopyWithImpl<$Res> implements $WeatherDtoCopyWith<$Res> {
       windDeg: windDeg == freezed
           ? _value.windDeg
           : windDeg // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       windGust: windGust == freezed
           ? _value.windGust
           : windGust // ignore: cast_nullable_to_non_nullable
@@ -203,7 +209,8 @@ class _$WeatherDtoCopyWithImpl<$Res> implements $WeatherDtoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$WeatherDtoCopyWith<$Res> implements $WeatherDtoCopyWith<$Res> {
+abstract class _$WeatherDtoCopyWith<$Res>
+    implements $CurrentWeatherDtoCopyWith<$Res> {
   factory _$WeatherDtoCopyWith(
           _WeatherDto value, $Res Function(_WeatherDto) then) =
       __$WeatherDtoCopyWithImpl<$Res>;
@@ -213,21 +220,22 @@ abstract class _$WeatherDtoCopyWith<$Res> implements $WeatherDtoCopyWith<$Res> {
       int? sunrise,
       int? sunset,
       double? temp,
-      double? feelsLike,
-      int? pressure,
-      int? humidity,
-      double? dewPoint,
+      @JsonKey(name: 'feels_like') double? feelsLike,
+      double? pressure,
+      double? humidity,
       double? uvi,
-      int? clouds,
-      int? visibility,
-      double? windSpeed,
-      int? windDeg,
-      double? windGust,
+      double? clouds,
+      double? visibility,
+      @JsonKey(name: 'dew_point') double? dewPoint,
+      @JsonKey(name: 'wind_speed') double? windSpeed,
+      @JsonKey(name: 'wind_deg') double? windDeg,
+      @JsonKey(name: 'wind_gust') double? windGust,
       List<WeatherTagDto>? weather});
 }
 
 /// @nodoc
-class __$WeatherDtoCopyWithImpl<$Res> extends _$WeatherDtoCopyWithImpl<$Res>
+class __$WeatherDtoCopyWithImpl<$Res>
+    extends _$CurrentWeatherDtoCopyWithImpl<$Res>
     implements _$WeatherDtoCopyWith<$Res> {
   __$WeatherDtoCopyWithImpl(
       _WeatherDto _value, $Res Function(_WeatherDto) _then)
@@ -245,10 +253,10 @@ class __$WeatherDtoCopyWithImpl<$Res> extends _$WeatherDtoCopyWithImpl<$Res>
     Object? feelsLike = freezed,
     Object? pressure = freezed,
     Object? humidity = freezed,
-    Object? dewPoint = freezed,
     Object? uvi = freezed,
     Object? clouds = freezed,
     Object? visibility = freezed,
+    Object? dewPoint = freezed,
     Object? windSpeed = freezed,
     Object? windDeg = freezed,
     Object? windGust = freezed,
@@ -278,14 +286,10 @@ class __$WeatherDtoCopyWithImpl<$Res> extends _$WeatherDtoCopyWithImpl<$Res>
       pressure: pressure == freezed
           ? _value.pressure
           : pressure // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int?,
-      dewPoint: dewPoint == freezed
-          ? _value.dewPoint
-          : dewPoint // ignore: cast_nullable_to_non_nullable
               as double?,
       uvi: uvi == freezed
           ? _value.uvi
@@ -294,11 +298,15 @@ class __$WeatherDtoCopyWithImpl<$Res> extends _$WeatherDtoCopyWithImpl<$Res>
       clouds: clouds == freezed
           ? _value.clouds
           : clouds // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       visibility: visibility == freezed
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
+      dewPoint: dewPoint == freezed
+          ? _value.dewPoint
+          : dewPoint // ignore: cast_nullable_to_non_nullable
+              as double?,
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
@@ -306,7 +314,7 @@ class __$WeatherDtoCopyWithImpl<$Res> extends _$WeatherDtoCopyWithImpl<$Res>
       windDeg: windDeg == freezed
           ? _value.windDeg
           : windDeg // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       windGust: windGust == freezed
           ? _value.windGust
           : windGust // ignore: cast_nullable_to_non_nullable
@@ -327,16 +335,16 @@ class _$_WeatherDto implements _WeatherDto {
       this.sunrise,
       this.sunset,
       this.temp,
-      this.feelsLike,
+      @JsonKey(name: 'feels_like') this.feelsLike,
       this.pressure,
       this.humidity,
-      this.dewPoint,
       this.uvi,
       this.clouds,
       this.visibility,
-      this.windSpeed,
-      this.windDeg,
-      this.windGust,
+      @JsonKey(name: 'dew_point') this.dewPoint,
+      @JsonKey(name: 'wind_speed') this.windSpeed,
+      @JsonKey(name: 'wind_deg') this.windDeg,
+      @JsonKey(name: 'wind_gust') this.windGust,
       this.weather});
 
   factory _$_WeatherDto.fromJson(Map<String, dynamic> json) =>
@@ -351,31 +359,36 @@ class _$_WeatherDto implements _WeatherDto {
   @override
   final double? temp;
   @override
+  @JsonKey(name: 'feels_like')
   final double? feelsLike;
   @override
-  final int? pressure;
+  final double? pressure;
   @override
-  final int? humidity;
-  @override
-  final double? dewPoint;
+  final double? humidity;
   @override
   final double? uvi;
   @override
-  final int? clouds;
+  final double? clouds;
   @override
-  final int? visibility;
+  final double? visibility;
   @override
+  @JsonKey(name: 'dew_point')
+  final double? dewPoint;
+  @override
+  @JsonKey(name: 'wind_speed')
   final double? windSpeed;
   @override
-  final int? windDeg;
+  @JsonKey(name: 'wind_deg')
+  final double? windDeg;
   @override
+  @JsonKey(name: 'wind_gust')
   final double? windGust;
   @override
   final List<WeatherTagDto>? weather;
 
   @override
   String toString() {
-    return 'WeatherDto(dt: $dt, sunrise: $sunrise, sunset: $sunset, temp: $temp, feelsLike: $feelsLike, pressure: $pressure, humidity: $humidity, dewPoint: $dewPoint, uvi: $uvi, clouds: $clouds, visibility: $visibility, windSpeed: $windSpeed, windDeg: $windDeg, windGust: $windGust, weather: $weather)';
+    return 'CurrentWeatherDto(dt: $dt, sunrise: $sunrise, sunset: $sunset, temp: $temp, feelsLike: $feelsLike, pressure: $pressure, humidity: $humidity, uvi: $uvi, clouds: $clouds, visibility: $visibility, dewPoint: $dewPoint, windSpeed: $windSpeed, windDeg: $windDeg, windGust: $windGust, weather: $weather)';
   }
 
   @override
@@ -400,9 +413,6 @@ class _$_WeatherDto implements _WeatherDto {
             (identical(other.humidity, humidity) ||
                 const DeepCollectionEquality()
                     .equals(other.humidity, humidity)) &&
-            (identical(other.dewPoint, dewPoint) ||
-                const DeepCollectionEquality()
-                    .equals(other.dewPoint, dewPoint)) &&
             (identical(other.uvi, uvi) ||
                 const DeepCollectionEquality().equals(other.uvi, uvi)) &&
             (identical(other.clouds, clouds) ||
@@ -410,6 +420,9 @@ class _$_WeatherDto implements _WeatherDto {
             (identical(other.visibility, visibility) ||
                 const DeepCollectionEquality()
                     .equals(other.visibility, visibility)) &&
+            (identical(other.dewPoint, dewPoint) ||
+                const DeepCollectionEquality()
+                    .equals(other.dewPoint, dewPoint)) &&
             (identical(other.windSpeed, windSpeed) ||
                 const DeepCollectionEquality()
                     .equals(other.windSpeed, windSpeed)) &&
@@ -433,10 +446,10 @@ class _$_WeatherDto implements _WeatherDto {
       const DeepCollectionEquality().hash(feelsLike) ^
       const DeepCollectionEquality().hash(pressure) ^
       const DeepCollectionEquality().hash(humidity) ^
-      const DeepCollectionEquality().hash(dewPoint) ^
       const DeepCollectionEquality().hash(uvi) ^
       const DeepCollectionEquality().hash(clouds) ^
       const DeepCollectionEquality().hash(visibility) ^
+      const DeepCollectionEquality().hash(dewPoint) ^
       const DeepCollectionEquality().hash(windSpeed) ^
       const DeepCollectionEquality().hash(windDeg) ^
       const DeepCollectionEquality().hash(windGust) ^
@@ -453,22 +466,22 @@ class _$_WeatherDto implements _WeatherDto {
   }
 }
 
-abstract class _WeatherDto implements WeatherDto {
+abstract class _WeatherDto implements CurrentWeatherDto {
   const factory _WeatherDto(
       {int? dt,
       int? sunrise,
       int? sunset,
       double? temp,
-      double? feelsLike,
-      int? pressure,
-      int? humidity,
-      double? dewPoint,
+      @JsonKey(name: 'feels_like') double? feelsLike,
+      double? pressure,
+      double? humidity,
       double? uvi,
-      int? clouds,
-      int? visibility,
-      double? windSpeed,
-      int? windDeg,
-      double? windGust,
+      double? clouds,
+      double? visibility,
+      @JsonKey(name: 'dew_point') double? dewPoint,
+      @JsonKey(name: 'wind_speed') double? windSpeed,
+      @JsonKey(name: 'wind_deg') double? windDeg,
+      @JsonKey(name: 'wind_gust') double? windGust,
       List<WeatherTagDto>? weather}) = _$_WeatherDto;
 
   factory _WeatherDto.fromJson(Map<String, dynamic> json) =
@@ -483,24 +496,29 @@ abstract class _WeatherDto implements WeatherDto {
   @override
   double? get temp => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'feels_like')
   double? get feelsLike => throw _privateConstructorUsedError;
   @override
-  int? get pressure => throw _privateConstructorUsedError;
+  double? get pressure => throw _privateConstructorUsedError;
   @override
-  int? get humidity => throw _privateConstructorUsedError;
-  @override
-  double? get dewPoint => throw _privateConstructorUsedError;
+  double? get humidity => throw _privateConstructorUsedError;
   @override
   double? get uvi => throw _privateConstructorUsedError;
   @override
-  int? get clouds => throw _privateConstructorUsedError;
+  double? get clouds => throw _privateConstructorUsedError;
   @override
-  int? get visibility => throw _privateConstructorUsedError;
+  double? get visibility => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'dew_point')
+  double? get dewPoint => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'wind_speed')
   double? get windSpeed => throw _privateConstructorUsedError;
   @override
-  int? get windDeg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_deg')
+  double? get windDeg => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'wind_gust')
   double? get windGust => throw _privateConstructorUsedError;
   @override
   List<WeatherTagDto>? get weather => throw _privateConstructorUsedError;
