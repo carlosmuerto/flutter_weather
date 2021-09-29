@@ -21,13 +21,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "ActualLang": MessageLookupByLibrary.simpleMessage("es"),
         "day": MessageLookupByLibrary.simpleMessage("Dia"),
         "humidity": MessageLookupByLibrary.simpleMessage("Humedad"),
+        "location": MessageLookupByLibrary.simpleMessage("Localizacon"),
         "nigth": MessageLookupByLibrary.simpleMessage("Noche"),
+        "noInternet":
+            MessageLookupByLibrary.simpleMessage("Sin conexion a Internet"),
+        "notAvailable": MessageLookupByLibrary.simpleMessage("No dispotible"),
+        "notHandled": MessageLookupByLibrary.simpleMessage(
+            "Error no nanejado, contacte con el soporte tectico"),
+        "permissionsAreDenied":
+            MessageLookupByLibrary.simpleMessage("Permisos denegados"),
+        "permissionsAreDeniedForever": MessageLookupByLibrary.simpleMessage(
+            "Permisos denegados permanentemente"),
         "presure": MessageLookupByLibrary.simpleMessage("Presion"),
+        "servicesAreDisabled":
+            MessageLookupByLibrary.simpleMessage("Fuera de servicio"),
         "temperature": MessageLookupByLibrary.simpleMessage("Temperatura"),
+        "timeoutException":
+            MessageLookupByLibrary.simpleMessage("tiempo Excedido"),
         "title": MessageLookupByLibrary.simpleMessage("Clima"),
+        "tryAgain": MessageLookupByLibrary.simpleMessage("Volver a intentar"),
         "windSpeed": MessageLookupByLibrary.simpleMessage("Vel. Viendo")
       };
 }

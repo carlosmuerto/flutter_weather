@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_weather/domain/location/location_info.dart';
-import 'package:flutter_weather/domain/weather/condition.dart';
-import 'package:flutter_weather/domain/weather/weather.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'dairy_weather.dart';
+import 'package:flutter_weather/domain/location/location_info.dart';
+import 'package:flutter_weather/domain/weather/weather.dart';
+
 import 'current_weather.dart';
+import 'dairy_weather.dart';
 
 part 'request_info.freezed.dart';
 part 'request_info.g.dart';

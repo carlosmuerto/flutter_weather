@@ -1,11 +1,19 @@
 {
 	"@@locale": "es",
-	"ActualLang": "es",
 	"title": "Clima",
 	"temperature": "Temperatura",
 	"humidity": "Humedad",
+	"noInternet": "Sin conexion a Internet",
 	"presure": "Presion",
 	"day": "Dia",
 	"nigth": "Noche",
+	"tryAgain": "Volver a intentar",
+	"location": "Localizacon",
+	"notAvailable": "No dispotible",
+	"timeoutException": "tiempo Excedido",
+	"servicesAreDisabled": "Fuera de servicio",
+	"permissionsAreDenied": "Permisos denegados",
+	"permissionsAreDeniedForever": "Permisos denegados permanentemente",
+	"notHandled": "Error no nanejado, contacte con el soporte tectico",
 	"windSpeed": "Vel. Viendo"
 }

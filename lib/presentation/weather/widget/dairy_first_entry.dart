@@ -31,7 +31,7 @@ class DairyFirstEntry extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Expanded(child: Icon(Icons.cloud)),
+          const Expanded(child: Icon(Icons.cloud)),
           SizedBox(
             width: 120,
             child: Column(

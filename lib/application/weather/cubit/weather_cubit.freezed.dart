@@ -23,6 +23,8 @@ WeatherState _$WeatherStateFromJson(Map<String, dynamic> json) {
       return _LoadSuccess.fromJson(json);
     case 'loadFailure':
       return _LoadFailure.fromJson(json);
+    case 'loadInProgressAgain':
+      return _LoadInProgressAgain.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'WeatherState',
@@ -54,6 +56,12 @@ class _$WeatherStateTearOff {
     );
   }
 
+  _LoadInProgressAgain loadInProgressAgain({required WeatherFailure failure}) {
+    return _LoadInProgressAgain(
+      failure: failure,
+    );
+  }
+
   WeatherState fromJson(Map<String, Object> json) {
     return WeatherState.fromJson(json);
   }
@@ -70,6 +78,7 @@ mixin _$WeatherState {
     required TResult Function() loadInProgress,
     required TResult Function(Weather weather) loadSuccess,
     required TResult Function(WeatherFailure failure) loadFailure,
+    required TResult Function(WeatherFailure failure) loadInProgressAgain,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -78,6 +87,7 @@ mixin _$WeatherState {
     TResult Function()? loadInProgress,
     TResult Function(Weather weather)? loadSuccess,
     TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -86,6 +96,7 @@ mixin _$WeatherState {
     TResult Function()? loadInProgress,
     TResult Function(Weather weather)? loadSuccess,
     TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -95,6 +106,7 @@ mixin _$WeatherState {
     required TResult Function(_LoadInProgress value) loadInProgress,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
+    required TResult Function(_LoadInProgressAgain value) loadInProgressAgain,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -103,6 +115,7 @@ mixin _$WeatherState {
     TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,6 +124,7 @@ mixin _$WeatherState {
     TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -177,6 +191,7 @@ class _$_Initial implements _Initial {
     required TResult Function() loadInProgress,
     required TResult Function(Weather weather) loadSuccess,
     required TResult Function(WeatherFailure failure) loadFailure,
+    required TResult Function(WeatherFailure failure) loadInProgressAgain,
   }) {
     return initial();
   }
@@ -188,6 +203,7 @@ class _$_Initial implements _Initial {
     TResult Function()? loadInProgress,
     TResult Function(Weather weather)? loadSuccess,
     TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
   }) {
     return initial?.call();
   }
@@ -199,6 +215,7 @@ class _$_Initial implements _Initial {
     TResult Function()? loadInProgress,
     TResult Function(Weather weather)? loadSuccess,
     TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -214,6 +231,7 @@ class _$_Initial implements _Initial {
     required TResult Function(_LoadInProgress value) loadInProgress,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
+    required TResult Function(_LoadInProgressAgain value) loadInProgressAgain,
   }) {
     return initial(this);
   }
@@ -225,6 +243,7 @@ class _$_Initial implements _Initial {
     TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
   }) {
     return initial?.call(this);
   }
@@ -236,6 +255,7 @@ class _$_Initial implements _Initial {
     TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -303,6 +323,7 @@ class _$_LoadInProgress implements _LoadInProgress {
     required TResult Function() loadInProgress,
     required TResult Function(Weather weather) loadSuccess,
     required TResult Function(WeatherFailure failure) loadFailure,
+    required TResult Function(WeatherFailure failure) loadInProgressAgain,
   }) {
     return loadInProgress();
   }
@@ -314,6 +335,7 @@ class _$_LoadInProgress implements _LoadInProgress {
     TResult Function()? loadInProgress,
     TResult Function(Weather weather)? loadSuccess,
     TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
   }) {
     return loadInProgress?.call();
   }
@@ -325,6 +347,7 @@ class _$_LoadInProgress implements _LoadInProgress {
     TResult Function()? loadInProgress,
     TResult Function(Weather weather)? loadSuccess,
     TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
     required TResult orElse(),
   }) {
     if (loadInProgress != null) {
@@ -340,6 +363,7 @@ class _$_LoadInProgress implements _LoadInProgress {
     required TResult Function(_LoadInProgress value) loadInProgress,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
+    required TResult Function(_LoadInProgressAgain value) loadInProgressAgain,
   }) {
     return loadInProgress(this);
   }
@@ -351,6 +375,7 @@ class _$_LoadInProgress implements _LoadInProgress {
     TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
   }) {
     return loadInProgress?.call(this);
   }
@@ -362,6 +387,7 @@ class _$_LoadInProgress implements _LoadInProgress {
     TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
     required TResult orElse(),
   }) {
     if (loadInProgress != null) {
@@ -463,6 +489,7 @@ class _$_LoadSuccess implements _LoadSuccess {
     required TResult Function() loadInProgress,
     required TResult Function(Weather weather) loadSuccess,
     required TResult Function(WeatherFailure failure) loadFailure,
+    required TResult Function(WeatherFailure failure) loadInProgressAgain,
   }) {
     return loadSuccess(weather);
   }
@@ -474,6 +501,7 @@ class _$_LoadSuccess implements _LoadSuccess {
     TResult Function()? loadInProgress,
     TResult Function(Weather weather)? loadSuccess,
     TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
   }) {
     return loadSuccess?.call(weather);
   }
@@ -485,6 +513,7 @@ class _$_LoadSuccess implements _LoadSuccess {
     TResult Function()? loadInProgress,
     TResult Function(Weather weather)? loadSuccess,
     TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
     required TResult orElse(),
   }) {
     if (loadSuccess != null) {
@@ -500,6 +529,7 @@ class _$_LoadSuccess implements _LoadSuccess {
     required TResult Function(_LoadInProgress value) loadInProgress,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
+    required TResult Function(_LoadInProgressAgain value) loadInProgressAgain,
   }) {
     return loadSuccess(this);
   }
@@ -511,6 +541,7 @@ class _$_LoadSuccess implements _LoadSuccess {
     TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
   }) {
     return loadSuccess?.call(this);
   }
@@ -522,6 +553,7 @@ class _$_LoadSuccess implements _LoadSuccess {
     TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
     required TResult orElse(),
   }) {
     if (loadSuccess != null) {
@@ -628,6 +660,7 @@ class _$_LoadFailure implements _LoadFailure {
     required TResult Function() loadInProgress,
     required TResult Function(Weather weather) loadSuccess,
     required TResult Function(WeatherFailure failure) loadFailure,
+    required TResult Function(WeatherFailure failure) loadInProgressAgain,
   }) {
     return loadFailure(failure);
   }
@@ -639,6 +672,7 @@ class _$_LoadFailure implements _LoadFailure {
     TResult Function()? loadInProgress,
     TResult Function(Weather weather)? loadSuccess,
     TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
   }) {
     return loadFailure?.call(failure);
   }
@@ -650,6 +684,7 @@ class _$_LoadFailure implements _LoadFailure {
     TResult Function()? loadInProgress,
     TResult Function(Weather weather)? loadSuccess,
     TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
     required TResult orElse(),
   }) {
     if (loadFailure != null) {
@@ -665,6 +700,7 @@ class _$_LoadFailure implements _LoadFailure {
     required TResult Function(_LoadInProgress value) loadInProgress,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
+    required TResult Function(_LoadInProgressAgain value) loadInProgressAgain,
   }) {
     return loadFailure(this);
   }
@@ -676,6 +712,7 @@ class _$_LoadFailure implements _LoadFailure {
     TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
   }) {
     return loadFailure?.call(this);
   }
@@ -687,6 +724,7 @@ class _$_LoadFailure implements _LoadFailure {
     TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
     required TResult orElse(),
   }) {
     if (loadFailure != null) {
@@ -711,5 +749,180 @@ abstract class _LoadFailure implements WeatherState {
   WeatherFailure get failure => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$LoadFailureCopyWith<_LoadFailure> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$LoadInProgressAgainCopyWith<$Res> {
+  factory _$LoadInProgressAgainCopyWith(_LoadInProgressAgain value,
+          $Res Function(_LoadInProgressAgain) then) =
+      __$LoadInProgressAgainCopyWithImpl<$Res>;
+  $Res call({WeatherFailure failure});
+
+  $WeatherFailureCopyWith<$Res> get failure;
+}
+
+/// @nodoc
+class __$LoadInProgressAgainCopyWithImpl<$Res>
+    extends _$WeatherStateCopyWithImpl<$Res>
+    implements _$LoadInProgressAgainCopyWith<$Res> {
+  __$LoadInProgressAgainCopyWithImpl(
+      _LoadInProgressAgain _value, $Res Function(_LoadInProgressAgain) _then)
+      : super(_value, (v) => _then(v as _LoadInProgressAgain));
+
+  @override
+  _LoadInProgressAgain get _value => super._value as _LoadInProgressAgain;
+
+  @override
+  $Res call({
+    Object? failure = freezed,
+  }) {
+    return _then(_LoadInProgressAgain(
+      failure: failure == freezed
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as WeatherFailure,
+    ));
+  }
+
+  @override
+  $WeatherFailureCopyWith<$Res> get failure {
+    return $WeatherFailureCopyWith<$Res>(_value.failure, (value) {
+      return _then(_value.copyWith(failure: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_LoadInProgressAgain implements _LoadInProgressAgain {
+  const _$_LoadInProgressAgain({required this.failure});
+
+  factory _$_LoadInProgressAgain.fromJson(Map<String, dynamic> json) =>
+      _$$_LoadInProgressAgainFromJson(json);
+
+  @override
+  final WeatherFailure failure;
+
+  @override
+  String toString() {
+    return 'WeatherState.loadInProgressAgain(failure: $failure)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _LoadInProgressAgain &&
+            (identical(other.failure, failure) ||
+                const DeepCollectionEquality().equals(other.failure, failure)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failure);
+
+  @JsonKey(ignore: true)
+  @override
+  _$LoadInProgressAgainCopyWith<_LoadInProgressAgain> get copyWith =>
+      __$LoadInProgressAgainCopyWithImpl<_LoadInProgressAgain>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadInProgress,
+    required TResult Function(Weather weather) loadSuccess,
+    required TResult Function(WeatherFailure failure) loadFailure,
+    required TResult Function(WeatherFailure failure) loadInProgressAgain,
+  }) {
+    return loadInProgressAgain(failure);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadInProgress,
+    TResult Function(Weather weather)? loadSuccess,
+    TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
+  }) {
+    return loadInProgressAgain?.call(failure);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadInProgress,
+    TResult Function(Weather weather)? loadSuccess,
+    TResult Function(WeatherFailure failure)? loadFailure,
+    TResult Function(WeatherFailure failure)? loadInProgressAgain,
+    required TResult orElse(),
+  }) {
+    if (loadInProgressAgain != null) {
+      return loadInProgressAgain(failure);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
+    required TResult Function(_LoadInProgressAgain value) loadInProgressAgain,
+  }) {
+    return loadInProgressAgain(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
+  }) {
+    return loadInProgressAgain?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
+    TResult Function(_LoadInProgressAgain value)? loadInProgressAgain,
+    required TResult orElse(),
+  }) {
+    if (loadInProgressAgain != null) {
+      return loadInProgressAgain(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LoadInProgressAgainToJson(this)
+      ..['runtimeType'] = 'loadInProgressAgain';
+  }
+}
+
+abstract class _LoadInProgressAgain implements WeatherState {
+  const factory _LoadInProgressAgain({required WeatherFailure failure}) =
+      _$_LoadInProgressAgain;
+
+  factory _LoadInProgressAgain.fromJson(Map<String, dynamic> json) =
+      _$_LoadInProgressAgain.fromJson;
+
+  WeatherFailure get failure => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$LoadInProgressAgainCopyWith<_LoadInProgressAgain> get copyWith =>
       throw _privateConstructorUsedError;
 }

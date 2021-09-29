@@ -71,38 +71,99 @@ class _MidBody extends StatelessWidget {
               ],
             ),
           ),
-          _TestSquare()
+          //_TestSquare(weather.locationInfo)
         ],
       ),
     );
   }
 }
 
-class _TestSquare extends StatelessWidget {
-  final OpenWeatherOneCall openWeatherOneCall = OpenWeatherOneCall();
-  _TestSquare({
+/*
+class _TestSquare extends StatefulWidget {
+  final LocationInfo locF;
+  const _TestSquare(
+    this.locF, {
     Key? key,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () {
-        //  debugPrint(.toString());
+  State<_TestSquare> createState() => _TestSquareState(locF);
+}
 
-        openWeatherOneCall
-            .fechNewWeather(33.44, -94.04, S.of(context).ActualLang)
-            .then(
-              (forW) => forW.fold(
-                (f) => debugPrint(f.toString()),
-                (w) {
-                  context.read<WeatherCubit>().setWeatherManually(w);
-                  //debugPrint(w.toString());
+class _TestSquareState extends State<_TestSquare> {
+  final OpenWeatherOneCall openWeatherOneCall = OpenWeatherOneCall();
+  LocationInfo locF;
+
+  _TestSquareState(this.locF);
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextButton(
+          onPressed: () {
+            //  debugPrint(.toString());
+            context.read<WeatherCubit>().state.maybeWhen(
+                  orElse: () {},
+                  loadSuccess: (w) => openWeatherOneCall
+                      .fechNewWeather(locF)
+                      .then(
+                        (forW) => forW.fold(
+                          (f) => debugPrint(f.toString()),
+                          (w) {
+                            context.read<WeatherCubit>().setWeatherManually(w);
+                            //debugPrint(w.toString());
+                          },
+                        ),
+                      ),
+                );
+          },
+          child: const Text("call weather"),
+        ),
+        TextButton(
+          onPressed: () {
+            debugPrint("call location");
+
+            context.read<WeatherCubit>().state.maybeWhen(
+                  orElse: () {},
+                  loadSuccess: (w) {
+                    final mockLoc = GPSlocationImpl();
+                    mockLoc.updateLocation(locF.lang).then(
+                          (foW) => foW.fold(
+                            () => mockLoc.getLocationInfo().fold(
+                              (f) => debugPrint(f.toString()),
+                              (locFIn) {
+                                print(locFIn);
+                                setState(() {
+                                  locF = locFIn;
+                                });
+                              },
+                            ),
+                            (f) => debugPrint(f.toString()),
+                          ),
+                        );
+                  },
+                );
+          },
+          child: Text("call location"),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width,
+          height: 50,
+          decoration: BoxDecoration(color: Colors.black.withOpacity(0.25)),
+          alignment: Alignment.center,
+          child: Text(context.read<WeatherCubit>().state.maybeWhen(
+                loadSuccess: (weather) {
+                  final lat = locF.lat;
+                  final lng = locF.lng;
+                  final name = locF.name;
+                  final lang = locF.lang;
+                  return "$name: ($lat:$lng) $lang";
                 },
-              ),
-            );
-      },
-      child: Text("call"),
+                orElse: () => "",
+              )),
+        ),
+      ],
     );
   }
 }
+*/

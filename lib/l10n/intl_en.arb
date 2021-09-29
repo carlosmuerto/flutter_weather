@@ -1,13 +1,21 @@
 {
 	"@@locale": "en",
-	"ActualLang": "en",
 	"title": "Wheather",
 	"temperature": "Temperature",
 	"humidity": "Humidity",
 	"presure": "Presure",
+	"noInternet": "no Internet conected",
 	"min": "min",
 	"max": "max",
 	"day": "Day",
 	"nigth": "Nigth",
+	"tryAgain": "try again",
+	"location": "Location",
+	"notAvailable": "not Available",
+	"timeoutException": "timeout",
+	"servicesAreDisabled": "services Are Disabled",
+	"permissionsAreDenied": "permissions Are Denied",
+	"permissionsAreDeniedForever": "permissions Are Denied Forever",
+	"notHandled": "not Handled Error: contact tecnical support",
 	"windSpeed": "Wind Speed"
 }

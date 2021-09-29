@@ -50,16 +50,6 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `en`
-  String get ActualLang {
-    return Intl.message(
-      'en',
-      name: 'ActualLang',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Wheather`
   String get title {
     return Intl.message(
@@ -100,6 +90,16 @@ class S {
     );
   }
 
+  /// `no Internet conected`
+  String get noInternet {
+    return Intl.message(
+      'no Internet conected',
+      name: 'noInternet',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `min`
   String get min {
     return Intl.message(
@@ -135,6 +135,86 @@ class S {
     return Intl.message(
       'Nigth',
       name: 'nigth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `try again`
+  String get tryAgain {
+    return Intl.message(
+      'try again',
+      name: 'tryAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location`
+  String get location {
+    return Intl.message(
+      'Location',
+      name: 'location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `not Available`
+  String get notAvailable {
+    return Intl.message(
+      'not Available',
+      name: 'notAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `timeout`
+  String get timeoutException {
+    return Intl.message(
+      'timeout',
+      name: 'timeoutException',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `services Are Disabled`
+  String get servicesAreDisabled {
+    return Intl.message(
+      'services Are Disabled',
+      name: 'servicesAreDisabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `permissions Are Denied`
+  String get permissionsAreDenied {
+    return Intl.message(
+      'permissions Are Denied',
+      name: 'permissionsAreDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `permissions Are Denied Forever`
+  String get permissionsAreDeniedForever {
+    return Intl.message(
+      'permissions Are Denied Forever',
+      name: 'permissionsAreDeniedForever',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `not Handled Error: contact tecnical support`
+  String get notHandled {
+    return Intl.message(
+      'not Handled Error: contact tecnical support',
+      name: 'notHandled',
       desc: '',
       args: [],
     );

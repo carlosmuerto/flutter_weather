@@ -36,3 +36,15 @@ Map<String, dynamic> _$$_LoadFailureToJson(_$_LoadFailure instance) =>
     <String, dynamic>{
       'failure': instance.failure.toJson(),
     };
+
+_$_LoadInProgressAgain _$$_LoadInProgressAgainFromJson(
+        Map<String, dynamic> json) =>
+    _$_LoadInProgressAgain(
+      failure: WeatherFailure.fromJson(json['failure'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_LoadInProgressAgainToJson(
+        _$_LoadInProgressAgain instance) =>
+    <String, dynamic>{
+      'failure': instance.failure.toJson(),
+    };

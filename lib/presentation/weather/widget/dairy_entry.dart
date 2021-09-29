@@ -6,7 +6,7 @@ import 'temp_column.dart';
 
 class DairyEntry extends StatelessWidget {
   final _textStyleTempColumn = const TextStyle(fontSize: 12);
-  final _textStyleTitle = const TextStyle(fontSize: 16);
+  final _textStyleTitle = const TextStyle(fontSize: 12);
   const DairyEntry({Key? key, required this.entry}) : super(key: key);
 
   final MapEntry<DateTime, DailyWeather> entry;
