@@ -15,7 +15,7 @@ Future<void> main() async {
         ? HydratedStorage.webStorageDirectory
         : await getTemporaryDirectory(),
   );
-  configureInjection(Environment.test);
+  configureInjection(Environment.dev);
   await dotenv.load();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const AppWidget());

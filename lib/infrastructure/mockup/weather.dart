@@ -9,6 +9,7 @@ import 'package:flutter_weather/domain/weather/weather_failure.dart';
 import 'package:flutter_weather/domain/weather/weather.dart';
 import 'package:injectable/injectable.dart';
 
+import 'mockup_tools.dart';
 import 'mockup_cases.dart';
 
 @LazySingleton(as: IWeatherFacade, env: [Environment.test])
@@ -19,16 +20,11 @@ class MockupIWeatherFacade implements IWeatherFacade {
 
   @override
   Future<Either<WeatherFailure, Weather>> fechNewWeather(
-          double lat, double lng, String lang) async =>
+          LocationInfo locInfo) async =>
       mockupCase.when(
         noErrors: () async => right(
           Weather(
-            locationInfo: LocationInfo(
-              lat: lat,
-              lng: lng,
-              lang: lang,
-              name: "Mockup/lorem City",
-            ),
+            locationInfo: locInfo,
             timeOfCall: DateTime.now(),
             temperature: optionOf(23.0),
             humidity: optionOf(50.0),
@@ -54,10 +50,6 @@ class MockupIWeatherFacade implements IWeatherFacade {
           ),
         ),
       );
-}
-
-extension _RandomNextInt on Random {
-  int nextIntRanged(int min, int max) => min + nextInt(max - min);
 }
 
 Map<DateTime, DailyWeather> _genDailyWeather(DateTime today) {
