@@ -8,11 +8,6 @@ import 'package:flutter_weather/domain/weather/weather.dart';
 import 'package:flutter_weather/infrastructure/open_weather/data_transfer_object/request_info.dart';
 import 'package:injectable/injectable.dart';
 
-/*
-https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
-9698c64505122fcccdd37191333ba3de
-*/
-
 @LazySingleton(as: IWeatherFacade, env: [Environment.prod, Environment.dev])
 class OpenWeatherOneCall implements IWeatherFacade {
   final Option<String> apiKey = optionOf(
